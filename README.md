@@ -6,13 +6,16 @@
 
 [Español](README.es.md)
 
-A pocket-sized, Star Wars-style **datapad / comlink** built around the
-**ES3C28P** (ESP32-S3 with a 2.8" capacitive IPS touch display,
+A pocket-sized, Star Wars-style **datapad / comlink prop** built around
+the **ES3C28P** (ESP32-S3 with a 2.8" capacitive IPS touch display,
 audio codec, amplifier, microSD slot, battery charger and USB-C): a
 parametric 3D-printable enclosure plus a touch-screen firmware with a
 tactical radar, a comlink soundboard, a hologram projector, an Aurebesh
 keyboard and a fully switchable interface language (Spanish, English or
 Aurebesh).
+
+It is a **functional prop**: a display/cosplay piece whose features exist
+to be fun and look the part — not a practical device.
 
 ![The finished datapad](docs/images/datapad-cover.jpg)
 
