@@ -58,11 +58,13 @@ e idioma de interfaz completamente intercambiable (español, inglés o Aurebesh)
 **Carcasa** (`3DPrints/`, `docs/`)
 
 - Caja de dos piezas (bisel frontal y chasis trasero), 61 x 120 x 22 mm,
-  con aberturas para USB-C, ranura microSD, botón BOOT y una bahía de
-  altavoz para el de fábrica o uno opcional de 20 mm (placa adaptadora
-  incluida). El bisel frontal y la montura de altavoz se imprimen sin
-  soportes; el chasis trasero viene en el `.3mf` con soportes habilitados
-  (opcionales, para un mejor acabado).
+  con aberturas para USB-C, ranura microSD, botón BOOT y una cámara
+  superior para el altavoz. Se incluye una placa adaptadora para montar
+  un altavoz rectangular genérico de repuesto, ya que el cable del
+  altavoz original es demasiado corto para esta carcasa. El bisel
+  frontal y la montura de altavoz se imprimen sin soportes; el chasis
+  trasero viene en el `.3mf` con soportes habilitados (opcionales, para
+  un mejor acabado).
 - Incrustaciones del emblema Rebelde y el borde listas para multicolor en el
   bisel frontal.
 - Un soporte de escritorio a juego de dos piezas: ensamble de espiga/caja sin
