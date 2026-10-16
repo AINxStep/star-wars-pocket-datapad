@@ -23,8 +23,8 @@ The design features True Zero-Support FDM printing on the front face (textured P
 | **Rear Chassis (Net Depth)** | 16.5 mm outer (14.7 mm net) | Provides $14.7\text{ mm}$ net clearance ($Z \in [-14.7, 0.0]\text{ mm}$) to accommodate LiPo battery, wires, and components without pressure on the board. |
 | **Upper Speaker Chamber** | **54.8 mm continuous width** | Completely open cavity at full depth ($Z = -14.7\text{ mm}$) across $Y \in [86.0, 113.7]\text{ mm}$. Transverse walls and stepped shelves removed. |
 | **Speaker Mount Adapter** | **54.5 x 25.5 x 1.0 mm** | Adapter plate (`ES3C28P_StarWars_Speaker_Mount.step/.stl`) with $30.0 \times 20.0\text{ mm}$ stadium cutout ($R = 10.0\text{ mm}$) and $0.15\text{ mm}$ per-side clearance to mount a generic rectangular replacement speaker (the stock unit's cable is too short for this case). |
-| **LiPo Battery** | Up to 50.0 x 34.0 x 10.0 mm | Located at the floor of the rear chassis ($Z = -14.4\text{ mm}$) with ample air clearance above PCB surface components. |
-| **Fasteners** | 4x M3 (length 14 to 18 mm) | $\varnothing 3.4\text{ mm}$ through-holes with $\varnothing 6.2\text{ mm}$ counterbores (3.2 mm depth) on the rear chassis. |
+| **LiPo Battery** | Up to 50.0 x 34.0 x 10.0 mm (2000–3000 mAh recommended) | Located at the floor of the rear chassis ($Z = -14.4\text{ mm}$) with ample air clearance above PCB surface components. Higher-capacity packs exceed the bay; smaller ones drain too fast. |
+| **Fasteners** | 4x M3 x 17 mm | $\varnothing 3.4\text{ mm}$ through-holes with $\varnothing 6.2\text{ mm}$ counterbores (3.2 mm depth) on the rear chassis. |
 
 ---
 

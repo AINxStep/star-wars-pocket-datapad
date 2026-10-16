@@ -76,8 +76,15 @@ Aurebesh).
   IPS display (SPI), FT6336G capacitive touch, ES8311 audio codec, FM8002E
   amplifier with speaker, WS2812 RGB LED, microSD slot (SDIO), TP4054
   Li-Ion charger, battery ADC and USB-C. No wiring required.
-- A 3.7 V Li-Ion/LiPo battery with a JST PH 2.0 connector (the board
-  charges it over USB-C; the datapad also runs on USB power alone).
+- A 3.7 V Li-Ion/LiPo battery with a JST PH 2.0 connector, **2000–3000 mAh**
+  (larger packs won't fit inside the enclosure; smaller ones drain too
+  fast). The board charges it over USB-C; the datapad also runs on USB
+  power alone.
+- A rectangular micro speaker (the generic type sold on AliExpress and
+  similar stores) — the stock speaker's cable is too short for this case.
+  The optional `Speaker_Mount` plate holds it in the upper chamber. Not
+  needed if you extend the stock speaker's cable.
+- 4 × M3 screws, 17 mm long.
 - A microSD card (optional, for custom sound effects).
 - The 3D-printed enclosure: the ready-to-slice project is
   [`3DPrints/datapad/ES3C28P_StarWars_Datapad.3mf`](3DPrints/datapad/ES3C28P_StarWars_Datapad.3mf)

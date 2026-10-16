@@ -23,8 +23,8 @@ El diseño incluye tolerancia cero para soportes en la cara frontal (True Zero-S
 | **Chasis trasero (profundidad)** | 16.5 mm exterior (14.7 mm neta) | Proporciona $14.7\text{ mm}$ libres ($Z \in [-14.7, 0.0]\text{ mm}$) para alojar batería LiPo, cables y componentes sin someter la placa a compresión. |
 | **Cámara superior de altavoz** | **54.8 mm ancho continuo** | Compartimento diáfano a profundidad total ($Z = -14.7\text{ mm}$) entre $Y \in [86.0, 113.7]\text{ mm}$. Sin muros transversales ni escalones intermedios. |
 | **Montura de altavoz alternativa** | **54.5 x 25.5 x 1.0 mm** | Placa adaptadora (`ES3C28P_StarWars_Speaker_Mount.step/.stl`) con abertura estadio de $30.0 \times 20.0\text{ mm}$ ($R = 10.0\text{ mm}$) y holgura de $0.15\text{ mm}$ por cara para montar un altavoz rectangular genérico de repuesto (el cable del altavoz original resulta demasiado corto para esta carcasa). |
-| **Batería LiPo** | Hasta 50.0 x 34.0 x 10.0 mm | Ubicada en el fondo del chasis trasero ($Z = -14.4\text{ mm}$) con margen de aire holgado sobre los componentes del PCB. |
-| **Tornillería** | 4x M3 (longitud 14 a 18 mm) | Orificios pasantes $\varnothing 3.4\text{ mm}$ con avellanado cilíndrico $\varnothing 6.2\text{ mm}$ (profundidad 3.2 mm) en el chasis trasero. |
+| **Batería LiPo** | Hasta 50.0 x 34.0 x 10.0 mm (recomendada: 2000–3000 mAh) | Ubicada en el fondo del chasis trasero ($Z = -14.4\text{ mm}$) con margen de aire holgado sobre los componentes del PCB. Una de mayor capacidad excede la bahía; una de menor se agota demasiado rápido. |
+| **Tornillería** | 4x M3 x 17 mm | Orificios pasantes $\varnothing 3.4\text{ mm}$ con avellanado cilíndrico $\varnothing 6.2\text{ mm}$ (profundidad 3.2 mm) en el chasis trasero. |
 
 ---
 

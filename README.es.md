@@ -78,8 +78,16 @@ e idioma de interfaz completamente intercambiable (español, inglés o Aurebesh)
   2.8" 240x320 (SPI), táctil capacitiva FT6336G, códec de audio ES8311,
   amplificador FM8002E con altavoz, LED RGB WS2812, ranura microSD (SDIO),
   cargador Li-Ion TP4054, ADC de batería y USB-C. Sin cableado.
-- Una batería Li-Ion/LiPo de 3.7 V con conector JST PH 2.0 (la placa la carga
-  por USB-C; el datapad también funciona solo con alimentación USB).
+- Una batería Li-Ion/LiPo de 3.7 V con conector JST PH 2.0, de
+  **2000–3000 mAh** (una de mayor capacidad no cabe en la carcasa; una de
+  menor se agotaría demasiado rápido). La placa la carga por USB-C; el
+  datapad también funciona solo con alimentación USB.
+- Un altavoz rectangular miniatura (el tipo genérico que se vende en
+  AliExpress y tiendas similares) — el cable del altavoz de fábrica es
+  demasiado corto para esta carcasa. La placa `Speaker_Mount` lo fija en
+  la cámara superior. No es necesario si alargas el cable del altavoz
+  original.
+- 4 tornillos M3 de 17 mm de largo.
 - Una tarjeta microSD (opcional, para efectos de sonido personalizados).
 - La carcasa impresa en 3D: el proyecto listo para laminar es
   [`3DPrints/datapad/ES3C28P_StarWars_Datapad.3mf`](3DPrints/datapad/ES3C28P_StarWars_Datapad.3mf)
