@@ -98,7 +98,7 @@ El proyecto integral preconfigurado para Bambu Studio / OrcaSlicer se encuentra 
   * Cara frontal apoyada sobre la lámina PEI texturizada.
   * **Cero soportes.**
   * Altura de capa recomendada: **$0.16\text{ mm}$** (o $0.20\text{ mm}$ con primera capa a $0.20\text{ mm}$).
-  * Las primeras 3 capas realizan los cambios de filamento para los inlays blancos y rojos; a partir de $Z > 0.60\text{ mm}$ continúa a mono-color a máxima velocidad sin torre de purga activa.
+  * Las primeras 3 capas realizan los cambios de filamento para los inlays de color; a partir de $Z > 0.60\text{ mm}$ continúa a mono-color a máxima velocidad sin torre de purga activa.
 * **Placa 2 — Rear Chassis:**
   * Cara posterior plana apoyada sobre la cama PEI.
   * **Soportes habilitados en el `.3mf`** — no son estrictamente necesarios
@@ -109,7 +109,19 @@ El proyecto integral preconfigurado para Bambu Studio / OrcaSlicer se encuentra 
   * Altura de capa: $0.16\text{ mm}$ o $0.20\text{ mm}$.
 * **Placa 3 — Speaker Mount:**
   * Pieza plana de $1.0\text{ mm}$ ($5$ capas a $0.20\text{ mm}$).
-  * **Cero soportes.** Tiempo de impresión estimado: ~4 minutos.
+  * **Cero soportes.**
+
+### Trabajo de Impresión de Referencia (como en la foto de portada)
+
+Impreso en una Bambu Lab H2C (doble nozzle + AMS, nozzle de $0.4\text{ mm}$, capas de $0.16\text{ mm}$, PEI texturizada). Los tiempos son las estimaciones del laminador para esa impresora — espera variaciones en otras máquinas:
+
+| Placa | Pieza | Filamento | Usado | Tiempo est. |
+|-------|-------|-----------|-------|-------------|
+| 1 | Front Bezel | Bambu PLA Basic Gris Plata `#A6A9AA` (cuerpo) + PLA Metal Grafito `#43403D` + inlays PLA Basic Blanco `#FFFFFF`, Rojo `#C12E1F` y PLA Metal Arena `#B39B84` | ~24 g | ~2 h 11 min |
+| 2 | Rear Chassis | Bambu PLA Metal Grafito `#43403D` + interfaz de soporte PLA | ~34 g | ~1 h 50 min |
+| 3 | Speaker Mount | Bambu PLA Basic Negro `#000000` | ~1 g | ~11 min |
+
+Un bisel monocolor también imprime perfectamente — simplemente asigna todos los objetos de la placa 1 a un solo filamento.
 
 ### Parámetros recomendados:
 * **Material:** PLA (Bambu PLA Basic / Matte / Metal / Galaxy) o PETG.

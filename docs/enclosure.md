@@ -98,7 +98,7 @@ A pre-configured Bambu Studio / OrcaSlicer project is provided ready to slice:
   * Front face resting flat on the textured PEI sheet.
   * **Zero supports.**
   * Recommended layer height: **$0.16\text{ mm}$** (or $0.20\text{ mm}$ with first layer at $0.20\text{ mm}$).
-  * Filament swaps occur only during the first 3 layers (0.60 mm) for the white and red inlays; $Z > 0.60\text{ mm}$ prints at standard speed with no ongoing purge waste.
+  * Filament swaps occur only during the first 3 layers (0.60 mm) for the colored inlays; $Z > 0.60\text{ mm}$ prints at standard speed with no ongoing purge waste.
 * **Plate 2 — Rear Chassis:**
   * Flat back face resting on the PEI bed.
   * **Supports enabled in the `.3mf`** — they are not strictly required
@@ -109,7 +109,19 @@ A pre-configured Bambu Studio / OrcaSlicer project is provided ready to slice:
   * Layer height: $0.16\text{ mm}$ or $0.20\text{ mm}$.
 * **Plate 3 — Speaker Mount:**
   * Flat $1.0\text{ mm}$ plate (5 layers at $0.20\text{ mm}$).
-  * **Zero supports.** Print time: ~4 minutes.
+  * **Zero supports.**
+
+### Reference Print Job (as shown in the cover photo)
+
+Printed on a Bambu Lab H2C (dual-nozzle + AMS, $0.4\text{ mm}$ nozzle, $0.16\text{ mm}$ layers, textured PEI). Times are the slicer estimates for that printer — expect them to vary on other machines:
+
+| Plate | Part | Filament | Used | Est. Time |
+|-------|------|----------|------|-----------|
+| 1 | Front Bezel | Bambu PLA Basic Silver Gray `#A6A9AA` (body) + PLA Metal Graphite `#43403D` + PLA Basic White `#FFFFFF`, Red `#C12E1F` and PLA Metal Sand `#B39B84` inlays | ~24 g | ~2 h 11 m |
+| 2 | Rear Chassis | Bambu PLA Metal Graphite `#43403D` + PLA support interface | ~34 g | ~1 h 50 m |
+| 3 | Speaker Mount | Bambu PLA Basic Black `#000000` | ~1 g | ~11 min |
+
+A single-color bezel prints perfectly fine too — simply assign all plate-1 objects to one filament.
 
 ### Recommended Slicer Settings:
 * **Material:** PLA (Bambu PLA Basic / Matte / Metal / Galaxy) or PETG.
