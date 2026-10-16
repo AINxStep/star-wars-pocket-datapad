@@ -1,0 +1,47 @@
+# Builds the web simulator (WASM) and deploys simulator/web/ to GitHub Pages.
+# Requires the repository to be public and Settings -> Pages -> Source set to
+# "GitHub Actions". While the repo is private the Pages steps are skipped (the
+# build still runs as a compile check); once public, enable Pages or the deploy
+# steps will fail — that is the reminder to turn it on.
+name: Deploy simulator to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'firmware/**'
+      - 'simulator/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mymindstorm/setup-emsdk@v14
+        with:
+          version: 6.0.11
+      - name: Build the simulator
+        run: ./simulator/build.sh
+      - uses: actions/configure-pages@v5
+        if: github.event.repository.private == false
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event.repository.private == false
+        with:
+          path: simulator/web
+      - id: deployment
+        if: github.event.repository.private == false
+        uses: actions/deploy-pages@v4

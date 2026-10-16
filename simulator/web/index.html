@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datapad Web Simulator</title>
+<style>
+  :root {
+    --bg: #0d0f12; --panel: #161a20; --edge: #2a303a; --text: #d7dce3; --dim: #8b95a5; --accent: #e8903c;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
+    font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; padding: 10px 16px;
+    background: var(--panel); border-bottom: 1px solid var(--edge); }
+  header h1 { margin: 0 12px 0 0; font-size: 15px; font-weight: 600; letter-spacing: .04em; color: var(--accent); }
+  label { color: var(--dim); display: inline-flex; gap: 6px; align-items: center; }
+  select, button { background: #1d232b; color: var(--text); border: 1px solid var(--edge); border-radius: 6px;
+    padding: 5px 10px; font: inherit; cursor: pointer; }
+  select:hover, button:hover { border-color: var(--accent); }
+  button.on { border-color: var(--accent); color: var(--accent); }
+  main { display: flex; gap: 20px; align-items: flex-start; justify-content: center; padding: 22px 16px; flex-wrap: wrap; }
+  #stage { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  #bezel { background: linear-gradient(145deg, #232830, #14171c); border: 1px solid #343b47; border-radius: 22px;
+    padding: 18px; box-shadow: 0 14px 40px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.05); position: relative; }
+  #bezel.wide { border-radius: 16px; padding: 14px; }
+  canvas { display: block; background: #000; border-radius: 4px; touch-action: none; user-select: none;
+    -webkit-user-select: none; image-rendering: auto; cursor: pointer; transition: filter .05s linear; }
+  #led { position: absolute; top: 7px; right: 22px; width: 9px; height: 9px; border-radius: 50%;
+    background: #222; box-shadow: inset 0 0 2px #000; transition: background .04s, box-shadow .04s; }
+  #hint { color: var(--dim); font-size: 12px; max-width: 520px; text-align: center; }
+  #logbox { width: 340px; max-width: 100%; background: var(--panel); border: 1px solid var(--edge); border-radius: 8px; overflow: hidden; }
+  #logbox h2 { margin: 0; padding: 8px 12px; font-size: 12px; color: var(--dim); font-weight: 600;
+    text-transform: uppercase; letter-spacing: .08em; border-bottom: 1px solid var(--edge); }
+  #log { margin: 0; padding: 10px 12px; height: 380px; overflow: auto; font: 11.5px/1.45 ui-monospace, Menlo, monospace;
+    color: #b9c2cf; white-space: pre-wrap; word-break: break-word; }
+  #status { color: var(--dim); }
+  footer { padding: 10px 16px; color: var(--dim); font-size: 11px;
+    text-align: center; border-top: 1px solid var(--edge); }
+  .hidden { display: none !important; }
+</head>
+<body>
+<header>
+  <h1>DATAPAD · WEB SIMULATOR</h1>
+  <label>Zoom <select id="zoom">
+    <option value="0.75">75 %</option><option value="1">100 %</option><option value="1.5">150 %</option>
+    <option value="2">200 %</option><option value="3">300 %</option>
+  </select></label>
+  <button id="sound" class="on">🔊 Sonido</button>
+  <button id="second" title="Abre otro datapad en una pestaña nueva para probar el enlace P2P">⊕ Segundo datapad</button>
+  <button id="logbtn" class="on">Registro</button>
+  <button id="reset" title="Borra los ajustes guardados (idioma, tema, volumen…)">Restablecer ajustes</button>
+  <span id="status">cargando…</span>
+</header>
+<main>
+  <div id="stage">
+    <div id="bezel"><canvas id="screen"></canvas><div id="led"></div></div>
+    <div id="hint">Arrastra con el ratón como si fuera el táctil. Desliza desde la barra superior hacia la derecha para volver al inicio.
+      Para probar el enlace P2P, abre un segundo datapad y activa <b>P2P</b> en Comlink en los dos.</div>
+  </div>
+  <div id="logbox"><h2>Salida serie</h2><pre id="log"></pre></div>
+</main>
+<script src="sim.js"></script>
+<footer>Unofficial, non-commercial fan project — not affiliated with, endorsed or sponsored by Lucasfilm/Disney.<br>
+Proyecto de fans no oficial y sin ánimo de lucro — no afiliado a Lucasfilm/Disney.</footer>
+</body>
+</html>

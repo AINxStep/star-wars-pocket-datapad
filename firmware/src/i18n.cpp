@@ -1,0 +1,111 @@
+#include "i18n.h"
+#include "settings.h"
+
+struct Entry { const char* es; const char* en; const char* aur; };   // aur == NULL: use English
+
+static const Entry table[S_COUNT] = {
+    /* S_BACK */          { "ATRAS", "BACK", NULL },
+    /* S_SETTINGS */      { "AJUSTES", "SETTINGS", NULL },
+
+    /* S_HOME_BADGE */    { "SECTOR TACTICO 04 // 35 ABY", "TACTICAL SECTOR 04 // 35 ABY", "SECTOR 04 // 35 ABY" },
+    /* S_HOME_RADAR */    { "SCANNER\nRADAR", "RADAR\nSCANNER", "RADAR\nSCAN" },
+    /* S_HOME_COMLINK */  { "COMLINK\nSONIDOS", "COMLINK\nSOUNDS", "COMM\nSOUND" },
+    /* S_HOME_AUREBESH */ { "AUREBESH\nTRADUCTOR", "AUREBESH\nTRANSLATOR", "AUR\nBESH" },
+    /* S_HOME_HOLO */     { "HOLOGRAMA\nPROYECTOR", "HOLOGRAM\nPROJECTOR", "HOLO\nPROJ" },
+
+    /* S_SPLASH_SUB */    { "ALIANZA REBELDE // MK-IV", "REBEL ALLIANCE // MK-IV", "REBEL ALLIANCE" },
+    /* S_BOOT_1 */        { "INICIANDO NUCLEO...", "STARTING CORE...", "STARTING CORE" },
+    /* S_BOOT_2 */        { "ENLACE COMLINK...", "COMLINK LINK...", "COMLINK LINK" },
+    /* S_BOOT_3 */        { "CALIBRANDO SENSORES...", "CALIBRATING SENSORS...", "SENSORS" },
+    /* S_BOOT_4 */        { "FRECUENCIA ALIANZA OK", "ALLIANCE FREQUENCY OK", "ALLIANCE OK" },
+
+    /* S_RADAR_TITLE */   { "SCANNER TACTICO", "TACTICAL SCANNER", "SCANNER" },
+    /* S_RADAR_ALARM */   { "ALERTA ROJA", "RED ALERT", NULL },
+    /* S_RADAR_HOSTILE */ { "HOSTIL TIE/LN  %.1f km\nRUMBO %03d // ALIADOS %d",
+                            "HOSTILE TIE/LN  %.1f km\nBEARING %03d // ALLIES %d",
+                            "TIE %.1f KM\nBRG %03d AL %d" },
+    /* S_RADAR_CLEAR */   { "SIN HOSTILES EN RANGO\nALIADOS %d", "NO HOSTILES IN RANGE\nALLIES %d", "CLEAR\nALLY %d" },
+
+    /* S_COMLINK_TITLE */ { "COMLINK AUDIO", "COMLINK AUDIO", "COMLINK" },
+    /* S_COMLINK_R2D2 */  { "DROIDE R2-D2", "R2-D2 DROID", NULL },
+    /* S_COMLINK_BLAST */ { "DISPARO BLASTER", "BLASTER SHOT", NULL },
+    /* S_COMLINK_CHAN */  { "CANAL COMLINK", "COMLINK CHANNEL", "COMLINK CALL" },
+    /* S_COMLINK_ALARM */ { "ALARMA IMPERIAL", "IMPERIAL ALARM", NULL },
+    /* S_COMLINK_LINK */  { "P2P", "P2P", NULL },
+    /* S_LINK_OFF */      { "ENLACE OFF", "LINK OFF", "OFF" },
+    /* S_LINK_SEARCH */   { "BUSCANDO", "SEARCHING", "SEEK" },
+    /* S_LINK_FOUND */    { "PAR OK", "PEER OK", "OK" },
+    /* S_MSG_RX */        { "MENSAJE RECIBIDO", "MESSAGE RECEIVED", "MSG IN" },
+
+    /* S_AUREBESH_TITLE */{ "MATRIZ AUREBESH", "AUREBESH MATRIX", "AUREBESH" },
+    /* S_AUREBESH_SPACE */{ "ESP", "SPC", NULL },
+
+    /* S_HOLO_TITLE */    { "HOLOGRAMA", "HOLOGRAM", NULL },
+    /* S_HOLO_DESC_0 */   { "DS-1 ESTACION DE BATALLA", "DS-1 BATTLE STATION", "DS-1 STATION" },
+    /* S_HOLO_DESC_1 */   { "CAZA ESTELAR REBELDE", "REBEL STARFIGHTER", "REBEL FIGHTER" },
+    /* S_HOLO_DESC_2 */   { "CAZA ESTELAR IMPERIAL", "IMPERIAL STARFIGHTER", "IMP FIGHTER" },
+    /* S_HOLO_DESC_3 */   { "SIMBOLO DE LA ALIANZA", "ALLIANCE SYMBOL", "ALLIANCE" },
+    /* S_HOLO_DESC_4 */   { "DESIERTO // DOS SOLES", "DESERT // TWO SUNS", "DESERT" },
+    /* S_HOLO_DESC_5 */   { "PLANETA-CIUDAD", "CITY PLANET", NULL },
+    /* S_HOLO_DESC_6 */   { "LUNA BOSCOSA", "FOREST MOON", NULL },
+    /* S_HOLO_DESC_7 */   { "DESTRUCTOR ESTELAR", "STAR DESTROYER", "STAR DEST" },
+    /* S_HOLO_DESC_8 */   { "DROIDE ASTROMEC", "ASTROMECH DROID", "DROID" },
+    /* S_HOLO_DESC_9 */   { "PLANETA HELADO", "ICE PLANET", "ICE" },
+
+    /* S_SET_BRIGHTNESS */{ "BRILLO PANTALLA", "SCREEN BRIGHTNESS", "BRIGHTNESS" },
+    /* S_SET_VOLUME */    { "VOLUMEN COMLINK", "COMLINK VOLUME", "VOLUME" },
+    /* S_SET_CALIBRATE */ { "CALIBRAR TACTIL", "CALIBRATE TOUCH", "CALIBRATE" },
+    /* S_SET_HINT */      { "TIP: MANTEN BOOT 2 s PARA\nCALIBRAR DESDE CUALQUIER PANTALLA",
+                            "TIP: HOLD BOOT 2 s TO\nCALIBRATE FROM ANY SCREEN",
+                            "BOOT 2 S =\nCALIBRATE" },
+    /* S_SET_SLEEP */     { "AHORRO", "AUTO SLEEP", "SLEEP" },
+    /* S_SET_BATT */      { "BAT. REAL", "BATT REAL", "BATT" },
+    /* S_SET_RESTART */   { "REINICIAR", "RESTART", "RESTART" },
+    /* S_AUTO */          { "AUTO", "AUTO", NULL },
+
+    /* S_CAL_PROMPT */    { "CALIBRACION %d/4\nTOQUE EL OBJETIVO", "CALIBRATION %d/4\nTOUCH THE TARGET", "CALIBRATE %d/4\nTOUCH TARGET" },
+    /* S_CAL_SAVED */     { "CALIBRACION GUARDADA", "CALIBRATION SAVED", "CALIBRATED" },
+    /* S_CAL_ERROR */     { "ERROR: PUNTOS INCOHERENTES\nSE MANTIENE LA ANTERIOR",
+                            "ERROR: INCONSISTENT POINTS\nKEEPING THE PREVIOUS ONE",
+                            "ERROR\nKEEPING OLD" },
+    /* S_CAL_CANCEL */    { "CANCELAR", "CANCEL", NULL },
+
+    /* S_MAP_TITLE */     { "CARTA ESTELAR", "STAR CHART", "CHART" },
+    /* S_MAP_TAP */       { "TOCA UN SISTEMA", "TAP A SYSTEM", "TAP SYSTEM" },
+    /* S_MAP_HOLO */      { "HOLO", "HOLO", NULL },
+    // SYSTEMS order: CORUSCANT ALDERAAN NABOO KASHYYYK MUSTAFAR YAVIN
+    //                TATOOINE BESPIN JAKKU DAGOBAH HOTH ENDOR
+    /* S_MAP_DESC_0 */    { "NUCLEO // CAPITAL GALACTICA", "CORE // GALACTIC CAPITAL", "CORE CAPITAL" },
+    /* S_MAP_DESC_1 */    { "NUCLEO // DESTRUIDO EN 0 ABY", "CORE // DESTROYED IN 0 ABY", "LOST 0 ABY" },
+    /* S_MAP_DESC_2 */    { "BORNE MEDIO // LAGOS Y CACERIA", "MID RIM // LAKES AND SAFARIS", "MID RIM" },
+    /* S_MAP_DESC_3 */    { "BORNE MEDIO // SELVA WOOKIEE", "MID RIM // WOOKIEE JUNGLE", "JUNGLE" },
+    /* S_MAP_DESC_4 */    { "BORNE EXTERIOR // VOLCANICO", "OUTER RIM // VOLCANIC", "VOLCANIC" },
+    /* S_MAP_DESC_5 */    { "BORNE EXTERIOR // BASE LUNA 4", "OUTER RIM // MOON 4 BASE", "MOON 4 BASE" },
+    /* S_MAP_DESC_6 */    { "BORNE EXTERIOR // DOS SOLES", "OUTER RIM // TWO SUNS", "TWO SUNS" },
+    /* S_MAP_DESC_7 */    { "BORNE EXTERIOR // CIUDAD NUBE", "OUTER RIM // CLOUD CITY", "CLOUD CITY" },
+    /* S_MAP_DESC_8 */    { "MARGEN INTERIOR // CEMENTERIO", "INNER RIM // SHIP GRAVEYARD", "GRAVEYARD" },
+    /* S_MAP_DESC_9 */    { "BORNE EXTERIOR // PANTANO", "OUTER RIM // REMOTE SWAMP", "SWAMP" },
+    /* S_MAP_DESC_10 */   { "BORNE EXTERIOR // BASE ECO", "OUTER RIM // ECHO BASE", "ECHO BASE" },
+    /* S_MAP_DESC_11 */   { "BORNE EXTERIOR // LUNA BOSCOSA", "OUTER RIM // FOREST MOON", "FOREST MOON" },
+
+    /* S_BCN_TITLE */     { "BALIZA DE SENAL", "SIGNAL BEACON", "BEACON" },
+    /* S_BCN_SEND */      { "TRANSMITIR", "TRANSMIT", NULL },
+    /* S_BCN_STOP */      { "PARAR", "STOP", NULL },
+    /* S_BCN_STROBE */    { "ESTROBO", "STROBE", NULL },
+    /* S_BCN_HINT */      { "MSJ: SE ESCRIBE EN EL TECLADO AUREBESH\nVACIO = SOS", "MSG COMPOSED IN THE AUREBESH KEYBOARD\nEMPTY = SOS", "AUR KB // EMPTY = SOS" },
+};
+
+Lang lang_get(void) {
+    uint8_t l = settings().language;
+    return l < LANG_COUNT ? (Lang)l : LANG_ES;
+}
+
+const char* tr(StrId id) {
+    if (id >= S_COUNT) return "";
+    const Entry& e = table[id];
+    switch (lang_get()) {
+        case LANG_EN:  return e.en;
+        case LANG_AUR: return e.aur ? e.aur : e.en;
+        default:       return e.es;
+    }
+}
