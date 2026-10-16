@@ -4,7 +4,7 @@
 
 Parametric 3D enclosure designed in **FreeCAD 1.1** to transform the **ES3C28P (ESP32-S3 with 2.8" Capacitive IPS display and USB-C)** module into a Star Wars tactical Datapad / comlink (Rebel Alliance / Imperial field communicator aesthetic).
 
-The design features True Zero-Support FDM printing on textured PEI sheets, calibrated boss extensions compensating for the $4.30\text{ mm}$ capacitive display stack, an expanded continuous upper speaker cavity, direct access to the BOOT button, an optional speaker replacement adapter plate, and 100% mechanical compatibility with the desktop display stand.
+The design features True Zero-Support FDM printing on the front face (textured PEI sheets), calibrated boss extensions compensating for the $4.30\text{ mm}$ capacitive display stack, an expanded continuous upper speaker cavity, direct access to the BOOT button, an optional speaker replacement adapter plate, and 100% mechanical compatibility with the desktop display stand. The front bezel and speaker mount need no supports; the rear chassis is designed to print support-free as well, though the bundled `.3mf` enables them for a cleaner finish.
 
 ![Master Technical Blueprint ES3C28P Datapad](blueprints/es3c28p_blueprint_sheet1_assembly.png)
 
@@ -101,7 +101,11 @@ A pre-configured Bambu Studio / OrcaSlicer project is provided ready to slice:
   * Filament swaps occur only during the first 3 layers (0.60 mm) for the white and red inlays; $Z > 0.60\text{ mm}$ prints at standard speed with no ongoing purge waste.
 * **Plate 2 — Rear Chassis:**
   * Flat back face resting on the PEI bed.
-  * **Zero supports.**
+  * **Supports enabled in the `.3mf`** — they are not strictly required
+    (the part is designed to print without them), but the shipped project
+    keeps them on because they improve surface quality around the
+    counterbores and cavity edges. Disable them in the slicer if you
+    prefer to skip them.
   * Layer height: $0.16\text{ mm}$ or $0.20\text{ mm}$.
 * **Plate 3 — Speaker Mount:**
   * Flat $1.0\text{ mm}$ plate (5 layers at $0.20\text{ mm}$).

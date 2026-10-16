@@ -57,10 +57,12 @@ Aurebesh).
 
 **Enclosure** (`3DPrints/`, `docs/`)
 
-- Two-part case (front bezel and rear chassis), 61 x 120 x 22 mm, printable
-  with no supports, with openings for USB-C, the microSD slot, the BOOT
-  button and a speaker bay sized for the stock speaker or an optional
-  20 mm upgrade (adapter plate included).
+- Two-part case (front bezel and rear chassis), 61 x 120 x 22 mm, with
+  openings for USB-C, the microSD slot, the BOOT button and a speaker bay
+  sized for the stock speaker or an optional 20 mm upgrade (adapter plate
+  included). The front bezel and speaker mount print with no supports; the
+  rear chassis ships in the `.3mf` with supports enabled (optional, for a
+  cleaner finish).
 - Multicolor-ready Rebel crest and border inlays on the front bezel.
 - A matching two-piece desktop stand: tool-free tenon/mortise assembly,
   70° viewing angle and a continuous USB-C charging channel.
