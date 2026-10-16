@@ -136,6 +136,18 @@ docs/
 .github/workflows/ Despliegue de GitHub Pages (compila el simulador en CI)
 ```
 
+## Una nota sobre este proyecto
+
+Este datapad nació como un hobby, hecho por un fan de Star Wars, por puro
+gusto. Irá recibiendo actualizaciones y novedades con el tiempo — pero a
+mi propio ritmo y bajo mis propios términos. **No existe compromiso** de
+mantenimiento, actualizaciones, correcciones ni soporte, y me reservo el
+derecho de modificar, reestructurar o eliminar el proyecto por completo
+en cualquier momento.
+
+Disfrútalo, constrúyelo y hazlo tuyo — solo no esperes plazos, garantías
+ni obligaciones desde este lado de la galaxia.
+
 ## Licencias
 
 - **Código del firmware y del simulador** (`firmware/`, `simulator/`): MIT —

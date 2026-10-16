@@ -131,6 +131,17 @@ docs/
 .github/workflows/ GitHub Pages deploy (builds the simulator in CI)
 ```
 
+## A note on this project
+
+This datapad was built as a hobby, by a Star Wars fan, purely for the fun
+of it. It will keep getting updates and new features over time — but on
+my own schedule and on my own terms. There is **no commitment** to
+ongoing maintenance, updates, fixes or support, and I reserve the right
+to modify, restructure or remove the project entirely at any moment.
+
+Enjoy it, build it, and make it yours — just please don't expect
+timelines, guarantees or obligations from this side of the galaxy.
+
 ## Licenses
 
 - **Firmware and simulator code** (`firmware/`, `simulator/`): MIT —
