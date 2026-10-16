@@ -2,7 +2,7 @@
 
 > [English version](enclosure.md) · [Volver al README](../README.es.md)
 
-Diseño paramétrico en 3D desarrollado en **FreeCAD 1.1** para transformar el módulo táctil capacitivo **LCDWIKI ES3C28P (ESP32-S3 con pantalla IPS de 2.8" y conector USB-C)** en un intercomunicador Datapad táctico de Star Wars (estética de la Alianza Rebelde / equipo de campo Imperial).
+Diseño paramétrico en 3D desarrollado en **FreeCAD 1.1** para transformar el módulo táctil capacitivo **ES3C28P (ESP32-S3 con pantalla IPS de 2.8" y conector USB-C)** en un intercomunicador Datapad táctico de Star Wars (estética de la Alianza Rebelde / equipo de campo Imperial).
 
 El diseño incluye tolerancia cero para soportes en la cara frontal (True Zero-Support FDM sobre lámina PEI), compensación métrica calibrada para el apilamiento de pantalla capacitiva de $4.30\text{ mm}$, cámara superior ampliada para el altavoz, acceso directo al botón BOOT, montura adaptadora para reemplazo de altavoz, y compatibilidad total con la Base Exhibidora de Escritorio.
 
@@ -15,7 +15,7 @@ El diseño incluye tolerancia cero para soportes en la cara frontal (True Zero-S
 | Parámetro | Medida | Descripción y Restricciones Físicas |
 | :--- | :--- | :--- |
 | **Dimensiones exteriores** | **61.0 x 120.0 x 22.0 mm** | Bisel frontal 5.5 mm + Chasis trasero 16.5 mm. Alberga el PCB de $50.0 \times 86.0\text{ mm}$ y cámara acústica superior. |
-| **Grosor Display Stack** | **4.30 mm** | Cristal táctil CTP 1.0 mm + OCA 0.5 mm + LCD IPS 2.3 mm + adhesivo 0.5 mm (plano oficial LCDWIKI `CR2025-MI6140`). |
+| **Grosor Display Stack** | **4.30 mm** | Cristal táctil CTP 1.0 mm + OCA 0.5 mm + LCD IPS 2.3 mm + adhesivo 0.5 mm (plano del módulo `CR2025-MI6140`, publicado en LCDWIKI). |
 | **Prolongación de torres frontales** | **Z = -0.80 mm** (altura 4.80 mm) | Las 4 torres del bisel frontal descienden hasta $Z = -0.80\text{ mm}$ para hacer contacto rígido contra la cara frontal del PCB. **Elimina 100% el desplazamiento o juego del PCB al conectar/desconectar el cable USB-C**. |
 | **Orificios piloto frontales** | $\varnothing 2.85\text{ mm}$ con embudo | Embudo cónico de autocentrado ($\varnothing 3.40 \to 2.85\text{ mm}$) en los primeros $0.8\text{ mm}$ seguido de orificio cilíndrico de $\varnothing 2.85\text{ mm}$ (profundidad de rosca 4.5 mm) para tornillos M3 autorroscantes. |
 | **Paso de torres de tornillos** | **Paso 78.0 x 42.0 mm** | Torres superiores ($Y = 81.0\text{ mm}$), inferiores ($Y = 3.0\text{ mm}$). Centros en $X = \pm 21.0\text{ mm}$ respecto al centro de placa ($X = 25.0\text{ mm}$). |
@@ -71,7 +71,7 @@ cajetines) está disponible en `docs/blueprints/` en PDF y PNG:
 
 ## 🔊 Montura Adaptadora de Altavoz (`Speaker_Mount`)
 
-Para proyectos donde se desee sustituir el altavoz circular original de la placa LCDWIKI por una cápsula acústica de mayor fidelidad o altavoz de $20\text{ mm}$, se incluye la pieza adaptadora [`ES3C28P_StarWars_Speaker_Mount`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount.stl):
+Para proyectos donde se desee sustituir el altavoz circular original de la placa ES3C28P por una cápsula acústica de mayor fidelidad o altavoz de $20\text{ mm}$, se incluye la pieza adaptadora [`ES3C28P_StarWars_Speaker_Mount`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount.stl):
 
 - **Medidas:** $54.50 \times 25.50 \times 1.00\text{ mm}$ con esquinas $R = 5.0\text{ mm}$.
 - **Abertura:** Ventana oblonga tipo estadio de $30.0 \times 20.0\text{ mm}$ ($R = 10.0\text{ mm}$ en extremos).

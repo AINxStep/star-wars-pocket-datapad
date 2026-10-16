@@ -4,8 +4,9 @@
 #include <LovyanGFX.hpp>
 
 // =========================================================================
-// LovyanGFX Configuration for LCDWIKI ES3C28P (2.8" ESP32-S3 display)
-// ILI9341V IPS 240x320 on FSPI. Pins from LCDWIKI's IO allocation table.
+// LovyanGFX Configuration for ES3C28P (2.8" ESP32-S3 display)
+// ILI9341V IPS 240x320 on FSPI. Pins per the board's IO allocation table
+// (documented on LCDWIKI).
 // The panel reset is wired to CHIP_PU (shared with the ESP32 reset): it is
 // not a GPIO, so pin_rst stays -1 and the panel resets with the chip.
 // =========================================================================

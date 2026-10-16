@@ -1,4 +1,4 @@
-# Firmware del datapad (LCDWIKI ES3C28P)
+# Firmware del datapad (ES3C28P)
 
 [English](README.md) · [Vista general del proyecto](../README.es.md)
 
@@ -55,7 +55,7 @@ escrito para el framework Arduino con **LVGL 8.4** (UI) y **LovyanGFX**
 
 ## Hardware y mapa de pines
 
-Placa: **LCDWIKI ES3C28P** — ESP32-S3 con pantalla IPS ILI9341V de 2.8"
+Placa: **ES3C28P** — ESP32-S3 con pantalla IPS ILI9341V de 2.8"
 240x320 (SPI), táctil capacitiva FT6336G, códec de audio ES8311,
 amplificador FM8002E con altavoz, LED RGB WS2812, ranura microSD (SDIO),
 cargador Li-Ion TP4054 con medición de batería y USB-C. La pantalla va en

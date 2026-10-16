@@ -3,7 +3,7 @@
 [English](README.md)
 
 Un **datapad / comlink** de bolsillo estilo Star Wars construido alrededor de la
-**LCDWIKI ES3C28P** (ESP32-S3 con pantalla táctil IPS capacitiva de 2.8",
+**ES3C28P** (ESP32-S3 con pantalla táctil IPS capacitiva de 2.8",
 códec de audio, amplificador, ranura microSD, cargador de batería y USB-C):
 una carcasa paramétrica imprimible en 3D más un firmware táctil con radar
 táctico, tabla de sonidos comlink, proyector de hologramas, teclado Aurebesh
@@ -66,7 +66,7 @@ e idioma de interfaz completamente intercambiable (español, inglés o Aurebesh)
 
 ## Qué necesitas
 
-- **LCDWIKI ES3C28P** — placa ESP32-S3 todo en uno: pantalla IPS ILI9341V de
+- **ES3C28P** — placa ESP32-S3 todo en uno: pantalla IPS ILI9341V de
   2.8" 240x320 (SPI), táctil capacitiva FT6336G, códec de audio ES8311,
   amplificador FM8002E con altavoz, LED RGB WS2812, ranura microSD (SDIO),
   cargador Li-Ion TP4054, ADC de batería y USB-C. Sin cableado.

@@ -7,7 +7,7 @@
 (function () {
   'use strict';
   const $ = (id) => document.getElementById(id);
-  // The project targets a single board: the LCDWIKI ES3C28P (240x320 portrait).
+  // The project targets a single board: the ES3C28P (240x320 portrait).
   const W = 240, H = 320;
 
   $('zoom').value = localStorage.getItem('sim/zoom') || '2';

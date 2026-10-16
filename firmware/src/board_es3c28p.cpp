@@ -9,7 +9,7 @@
 #include <driver/gpio.h>
 
 // =========================================================================
-// LCDWIKI ES3C28P: 240x320 ILI9341V IPS on SPI3 (LovyanGFX), FT6336G
+// ES3C28P: 240x320 ILI9341V IPS on SPI3 (LovyanGFX), FT6336G
 // capacitive touch + ES8311 codec sharing I2C port 0 (SDA 16, SCL 15),
 // single WS2812 on GPIO42, battery divider on GPIO9, microSD on SDIO.
 // =========================================================================

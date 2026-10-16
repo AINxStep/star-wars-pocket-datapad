@@ -2,7 +2,7 @@
 
 > [Versión en español](enclosure.es.md) · [Back to README](../README.md)
 
-Parametric 3D enclosure designed in **FreeCAD 1.1** to transform the **LCDWIKI ES3C28P (ESP32-S3 with 2.8" Capacitive IPS display and USB-C)** module into a Star Wars tactical Datapad / comlink (Rebel Alliance / Imperial field communicator aesthetic).
+Parametric 3D enclosure designed in **FreeCAD 1.1** to transform the **ES3C28P (ESP32-S3 with 2.8" Capacitive IPS display and USB-C)** module into a Star Wars tactical Datapad / comlink (Rebel Alliance / Imperial field communicator aesthetic).
 
 The design features True Zero-Support FDM printing on textured PEI sheets, calibrated boss extensions compensating for the $4.30\text{ mm}$ capacitive display stack, an expanded continuous upper speaker cavity, direct access to the BOOT button, an optional speaker replacement adapter plate, and 100% mechanical compatibility with the desktop display stand.
 
@@ -15,7 +15,7 @@ The design features True Zero-Support FDM printing on textured PEI sheets, calib
 | Parameter | Measurement | Description & Physical Constraints |
 | :--- | :--- | :--- |
 | **External Dimensions** | **61.0 x 120.0 x 22.0 mm** | Front Bezel 5.5 mm + Rear Chassis 16.5 mm. Houses the $50.0 \times 86.0\text{ mm}$ PCB and upper acoustic chamber. |
-| **Display Stack Thickness** | **4.30 mm** | CTP glass 1.0 mm + OCA 0.5 mm + IPS LCD 2.3 mm + adhesive 0.5 mm (official LCDWIKI drawing `CR2025-MI6140`). |
+| **Display Stack Thickness** | **4.30 mm** | CTP glass 1.0 mm + OCA 0.5 mm + IPS LCD 2.3 mm + adhesive 0.5 mm (display module drawing `CR2025-MI6140`, published on LCDWIKI). |
 | **Front Screw Boss Extension** | **Z = -0.80 mm** (total height 4.80 mm) | The 4 front bezel screw bosses extend down to $Z = -0.80\text{ mm}$ to make direct rigid contact against the front face of the PCB. **Eliminates 100% of PCB axial sliding/play during USB-C cable insertion and extraction**. |
 | **Front Pilot Holes** | $\varnothing 2.85\text{ mm}$ with lead-in funnel | Self-centering conical funnel ($\varnothing 3.40 \to 2.85\text{ mm}$) across the first $0.8\text{ mm}$, followed by $\varnothing 2.85\text{ mm}$ blind pilot hole (4.5 mm thread depth) for tight M3 thread engagement. |
 | **Screw Tower Pitch** | **78.0 x 42.0 mm Matrix** | Upper towers ($Y = 81.0\text{ mm}$), lower towers ($Y = 3.0\text{ mm}$). Tower centers at $X = \pm 21.0\text{ mm}$ relative to PCB center ($X = 25.0\text{ mm}$). |

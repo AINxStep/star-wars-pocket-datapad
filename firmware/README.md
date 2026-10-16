@@ -1,4 +1,4 @@
-# Datapad firmware (LCDWIKI ES3C28P)
+# Datapad firmware (ES3C28P)
 
 [Español](README.es.md) · [Project overview](../README.md)
 
@@ -47,7 +47,7 @@ with **PlatformIO**.
 
 ## Hardware and pin map
 
-Board: **LCDWIKI ES3C28P** — ESP32-S3 with a 2.8" ILI9341V 240x320 IPS
+Board: **ES3C28P** — ESP32-S3 with a 2.8" ILI9341V 240x320 IPS
 display (SPI), FT6336G capacitive touch, ES8311 audio codec, FM8002E
 amplifier and speaker, WS2812 RGB LED, microSD slot (SDIO), TP4054 Li-Ion
 charger with battery sense and USB-C. The screen runs in portrait so the

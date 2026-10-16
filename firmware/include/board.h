@@ -7,7 +7,7 @@
 // Board abstraction. The UI, audio engine and link code are board-agnostic;
 // everything that touches pins, panels or touch controllers lives behind
 // this header, implemented once per board:
-//   BOARD_ES3C28P -> src/board_es3c28p.cpp (LCDWIKI ES3C28P, 240x320 SPI +
+//   BOARD_ES3C28P -> src/board_es3c28p.cpp (ES3C28P, 240x320 SPI +
 //                                          ILI9341V + FT6336G, ES8311 audio)
 //   BOARD_SIM     -> simulator/src/board_sim.cpp (web browser layer)
 // The board is selected by a build flag in platformio.ini.

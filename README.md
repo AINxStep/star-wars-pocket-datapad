@@ -3,7 +3,7 @@
 [Español](README.es.md)
 
 A pocket-sized, Star Wars-style **datapad / comlink** built around the
-**LCDWIKI ES3C28P** (ESP32-S3 with a 2.8" capacitive IPS touch display,
+**ES3C28P** (ESP32-S3 with a 2.8" capacitive IPS touch display,
 audio codec, amplifier, microSD slot, battery charger and USB-C): a
 parametric 3D-printable enclosure plus a touch-screen firmware with a
 tactical radar, a comlink soundboard, a hologram projector, an Aurebesh
@@ -65,7 +65,7 @@ Aurebesh).
 
 ## What you need
 
-- **LCDWIKI ES3C28P** — an all-in-one ESP32-S3 board: 2.8" 240x320 ILI9341V
+- **ES3C28P** — an all-in-one ESP32-S3 board: 2.8" 240x320 ILI9341V
   IPS display (SPI), FT6336G capacitive touch, ES8311 audio codec, FM8002E
   amplifier with speaker, WS2812 RGB LED, microSD slot (SDIO), TP4054
   Li-Ion charger, battery ADC and USB-C. No wiring required.
