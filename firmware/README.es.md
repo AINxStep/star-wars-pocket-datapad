@@ -75,22 +75,51 @@ vertical para que el USB-C quede abajo, a juego con la carcasa.
 
 ## Compilación y flasheado
 
-Necesitas [PlatformIO](https://platformio.org/) (CLI o la extensión de VS
-Code). Hay un único entorno, `esp32-s3-es3c28p`:
+Solo necesitas un ordenador, un cable USB-C y
+[PlatformIO](https://platformio.org/) — no hace falta experiencia con
+ESP32. Elige **una** de las dos opciones.
 
-```bash
-cd firmware
-pio run -e esp32-s3-es3c28p -t upload --upload-port /dev/cu.usbmodemXXXX
-```
+### Opción A — VS Code + PlatformIO (la más fácil, gráfica)
 
-Pasa siempre `--upload-port` explícitamente — la autodetección puede elegir
-la placa equivocada. La ES3C28P usa USB nativo: el puerto aparece como
-`/dev/cu.usbmodem*` y el auto-reset de TinyUSB suele funcionar; si el
-flasheado falla, entra en modo descarga manual (mantén **BOOT**, pulsa
-**RST**, suelta BOOT).
+1. Instala [Visual Studio Code](https://code.visualstudio.com/), ábrelo e
+   instala la extensión **PlatformIO IDE** (panel de Extensiones, busca
+   "PlatformIO IDE"). Reinicia VS Code cuando lo pida.
+2. Descarga este repositorio: botón verde **Code → Download ZIP** en
+   GitHub y descomprime el archivo. (O `git clone` si ya usas git.)
+3. En VS Code, **File → Open Folder…** y abre la carpeta `firmware/` del
+   proyecto descomprimido (la que contiene `platformio.ini`).
+4. Conecta la ES3C28P al ordenador con el cable USB-C.
+5. Pulsa el icono de alienígena **PlatformIO** en la barra lateral y, bajo
+   **PROJECT TASKS → esp32-s3-es3c28p → General**, haz clic en **Upload**.
+   La primera compilación descarga el toolchain y las librerías (tarda
+   unos minutos); las siguientes tardan segundos.
+6. Listo — el datapad se reinicia en la pantalla de arranque cuando
+   termina la carga.
+
+Si la carga falla con "could not open port" o "no serial data received",
+la placa no está en modo descarga. Entra manualmente: mantén pulsado el
+botón **BOOT** (GPIO 0, serigrafiado en la placa), pulsa **RST** y suelta
+BOOT — y vuelve a pulsar **Upload**.
+
+### Opción B — PlatformIO Core (línea de comandos)
+
+1. Instala [PlatformIO Core](https://docs.platformio.org/en/latest/core/installation/index.html).
+2. Abre un terminal en la carpeta `firmware/` y ejecuta:
+
+   ```bash
+   pio run -e esp32-s3-es3c28p -t upload --upload-port /dev/cu.usbmodemXXXX
+   ```
+
+   Encuentra tu puerto con `pio device list` — la ES3C28P aparece como
+   `cu.usbmodem*` (macOS/Linux) o `COMx` (Windows). Pasa siempre
+   `--upload-port` explícitamente — la autodetección puede elegir la placa
+   equivocada.
+3. Mismo plan B si falla la carga: modo descarga manual
+   (mantén **BOOT** → pulsa **RST** → suelta **BOOT**).
 
 El proyecto usa la tabla de particiones `huge_app` (3 MB para el programa)
-y guarda los ajustes en NVS.
+y guarda los ajustes en NVS — al reflashear se conservan brillo, volumen
+e idioma.
 
 ### Diagnóstico por serie
 
@@ -108,42 +137,80 @@ placa, así que flashea solo estando despierta (o en modo descarga manual).
 
 ## Sonidos personalizados (opcional)
 
-Al arrancar el firmware busca clips WAV en este orden y usa una versión
-sintetizada integrada para los que falten:
+El datapad funciona de fábrica con efectos sintetizados integrados — no
+necesitas tarjeta microSD ni archivos de audio. Si quieres clips reales
+(frases de las películas, pitidos auténticos de R2-D2, etc.), puedes
+sustituir cada sonido copiando tus propios WAV a una microSD.
 
-1. `/sounds/<nombre>.wav` en la tarjeta microSD (SDIO, 4 bits con reintento
-   a 1 bit)
-2. `<nombre>.wav` en la partición LittleFS interna
-3. El clip sintetizado compilado en el firmware
+### Cómo funciona
+
+Cada sonido tiene un nombre de archivo fijo. Al arrancar, el firmware
+monta **una** fuente de sonido — la tarjeta microSD si hay una insertada;
+si no, la partición LittleFS interna. Cualquier archivo que falte en esa
+fuente (o un WAV que no se pueda leer) usa el clip sintetizado compilado
+en el firmware, así que el datapad siempre tiene todos los sonidos.
+
+### Sustituir sonidos con los tuyos (microSD — lo más fácil)
+
+1. Formatea una microSD en **FAT32** (el formato por defecto en tarjetas
+   de hasta 32 GB).
+2. En la raíz de la tarjeta, crea una carpeta llamada exactamente
+   `sounds` (en minúsculas).
+3. Copia ahí tus archivos WAV, renombrándolos según la tabla. Cualquier
+   archivo que no pongas simplemente conserva su sonido sintetizado.
 
 ```
-click.wav  r2d2.wav  blaster.wav  comlink.wav  alarm.wav  holo.wav
-coms1.wav  coms2.wav  coms3.wav
+raíz de la microSD/
+└── sounds/
+    ├── click.wav     sonido de toque en la UI
+    ├── r2d2.wav      pantalla Comlink — botón R2-D2
+    ├── blaster.wav   pantalla Comlink — botón bláster
+    ├── comlink.wav   pantalla Comlink — botón de canal
+    ├── alarm.wav     pantalla Comlink — botón alarma imperial
+    ├── holo.wav      activación del proyector de hologramas
+    ├── coms1.wav     ranura ambiental 1 (ver abajo)
+    ├── coms2.wav     ranura ambiental 2
+    └── coms3.wav     ranura ambiental 3
 ```
 
-Los `coms*.wav` son las ranuras de charla ambiental del comlink: mientras se
-muestra la pantalla de Inicio, uno suena tras un intervalo aleatorio de
-1-5 min (los tres se turnan en orden barajado, nunca el mismo dos veces
-seguidas; se salta si otro efecto está sonando). El repositorio los incluye
-como un segundo de silencio, así que no hay sonido ambiental hasta que
-pongas tus propios clips. Usa audio con derechos de uso y mantenlo fuera de
-los commits (por ejemplo
-`git update-index --skip-worktree firmware/sounds/coms1.wav` y los otros
-dos).
+4. Inserta la tarjeta y enciende (o reinicia). El log de serie imprime
+   `[AUDIO] microSD mounted` y qué archivos se cargaron desde dónde.
 
-Para subir la carpeta `sounds/` a la partición LittleFS (una vez, y cada vez
-que cambien — una microSD es más fácil: solo copia los archivos):
+**Formato de archivo:** WAV PCM, 8 o 16 bits, mono o estéreo, 4–48 kHz.
+Mantén los efectos por debajo de ~6 s; los clips más largos se guardan a
+mitad de frecuencia de muestreo para ahorrar RAM. Usa audio sobre el que
+tengas derechos — clips libres de regalías, tus propias grabaciones o
+sonidos con licencia.
+
+### Charla ambiental (`coms*.wav`) — qué es
+
+Mientras la pantalla de Inicio está visible, el datapad reproduce al azar
+uno de los tres clips `coms` tras un intervalo de 1-5 minutos, como el
+ruido de fondo de un comlink en la consola de una nave. Las tres ranuras
+se turnan en orden barajado (nunca el mismo clip dos veces seguidas) y se
+salta si otro efecto está sonando.
+
+El repositorio incluye `coms1/2/3.wav` como **un segundo de silencio**,
+así que el dispositivo está completamente callado hasta que pongas tus
+propios archivos — solo reemplázalos si quieres el efecto ambiental.
+
+### Alternativa: flash interna (LittleFS)
+
+Solo se usa cuando **no hay tarjeta microSD insertada**. Si prefieres no
+usar tarjeta, pon los WAV en la carpeta `firmware/sounds/` (mismos
+nombres) y súbelos a la partición LittleFS de la placa:
 
 ```bash
 pio run -e esp32-s3-es3c28p -t uploadfs --upload-port /dev/cu.usbmodemXXXX
 ```
 
-Formatos: WAV PCM, 8 o 16 bits, mono o estéreo, 4-48 kHz, hasta unos 6 s
-para los efectos. Los clips de más de 20 000 muestras se guardan a mitad de
-frecuencia de muestreo para ahorrar RAM. Los sonidos de muestra
-(sintetizados, originales; las ranuras ambientales son silencio) están en
-`sounds/`; regenéralos con `python3 tools/gen_sounds.py`. El log de serie
-muestra qué archivos se cargaron y desde dónde.
+(En VS Code: **PROJECT TASKS → esp32-s3-es3c28p → Platform → Upload
+Filesystem Image**.) La ruta de la microSD es más sencilla — es solo
+copiar archivos.
+
+Los efectos de muestra en `sounds/` son los mismos originales
+sintetizados que usa el firmware como respaldo; regenéralos con
+`python3 tools/gen_sounds.py`.
 
 ## Temas de color
 
