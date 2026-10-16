@@ -1,5 +1,9 @@
 # Star Wars Pocket Datapad
 
+[![Live demo](https://img.shields.io/badge/LIVE_DEMO-WEB_SIMULATOR-brightgreen)](https://ainxstep.github.io/star-wars-pocket-datapad/)
+[![License](https://img.shields.io/badge/LICENSE-MIT_%2F_CC_BY--NC--SA_4.0-blue)](LICENSE)
+[![Hardware](https://img.shields.io/badge/HARDWARE-ES3C28P-orange)](docs/enclosure.md)
+
 [Español](README.es.md)
 
 A pocket-sized, Star Wars-style **datapad / comlink** built around the
