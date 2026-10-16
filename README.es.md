@@ -13,9 +13,9 @@ una carcasa paramétrica imprimible en 3D más un firmware táctil con radar
 táctico, tabla de sonidos comlink, proyector de hologramas, teclado Aurebesh
 e idioma de interfaz completamente intercambiable (español, inglés o Aurebesh).
 
-Es un **prop funcional** (utilería que funciona): una pieza de exhibición o
-cosplay cuyas funciones existen para divertir y dar el papel — no un
-dispositivo práctico.
+Es un **prop funcional** (utilería que funciona): una pieza de exhibición
+y un gran complemento para cosplays de Star Wars, cuyas funciones existen
+para divertir y dar el papel — no un dispositivo práctico.
 
 ![El datapad terminado](docs/images/datapad-cover.jpg)
 

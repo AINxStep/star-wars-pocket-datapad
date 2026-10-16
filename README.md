@@ -14,8 +14,9 @@ tactical radar, a comlink soundboard, a hologram projector, an Aurebesh
 keyboard and a fully switchable interface language (Spanish, English or
 Aurebesh).
 
-It is a **functional prop**: a display/cosplay piece whose features exist
-to be fun and look the part — not a practical device.
+It is a **functional prop**: a display piece and a great complement for
+Star Wars cosplay, whose features exist to be fun and look the part —
+not a practical device.
 
 ![The finished datapad](docs/images/datapad-cover.jpg)
 
