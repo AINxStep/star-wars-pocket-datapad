@@ -10,8 +10,8 @@ El diseño incluye tolerancia cero para soportes en la cara frontal (True Zero-S
 
 | | | |
 |:---:|:---:|:---:|
-| ![Ensamble — vista isométrica](images/datapad_render_iso.png) | ![Bisel frontal — vista de cara](images/datapad_render_front.png) | ![Chasis trasero — vista interior](images/datapad_render_interior.png) |
-| *Ensamble — isométrica* | *Bisel frontal* | *Interior del chasis trasero* |
+| ![Datapad ensamblado — vista isométrica](images/datapad_render_iso.png) | ![Datapad ensamblado — vista frontal](images/datapad_render_front.png) | ![Datapad ensamblado — vista posterior](images/datapad_render_rear.png) |
+| *Ensamble — isométrica* | *Ensamble — frontal* | *Ensamble — posterior* |
 
 ---
 

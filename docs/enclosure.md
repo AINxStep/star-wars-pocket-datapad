@@ -10,8 +10,8 @@ The design features True Zero-Support FDM printing on the front face (textured P
 
 | | | |
 |:---:|:---:|:---:|
-| ![Assembly — isometric view](images/datapad_render_iso.png) | ![Front bezel — face view](images/datapad_render_front.png) | ![Rear chassis — interior view](images/datapad_render_interior.png) |
-| *Assembly — isometric* | *Front bezel* | *Rear chassis interior* |
+| ![Assembled datapad — isometric view](images/datapad_render_iso.png) | ![Assembled datapad — front view](images/datapad_render_front.png) | ![Assembled datapad — rear view](images/datapad_render_rear.png) |
+| *Assembly — isometric* | *Assembly — front* | *Assembly — rear* |
 
 ---
 
