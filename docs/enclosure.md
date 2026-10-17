@@ -8,6 +8,11 @@ The design features True Zero-Support FDM printing on the front face (textured P
 
 ![Master Technical Blueprint ES3C28P Datapad](blueprints/es3c28p_blueprint_sheet1_assembly.png)
 
+| | | |
+|:---:|:---:|:---:|
+| ![Assembly — isometric view](images/datapad_render_iso.png) | ![Front bezel — face view](images/datapad_render_front.png) | ![Rear chassis — interior view](images/datapad_render_interior.png) |
+| *Assembly — isometric* | *Front bezel* | *Rear chassis interior* |
+
 ---
 
 ## 📐 Specifications & Calibrated Dimensions
@@ -25,10 +30,6 @@ The design features True Zero-Support FDM printing on the front face (textured P
 | **Speaker Mount Adapter** | **54.5 x 25.5 x 1.0 mm** | Adapter plate (`ES3C28P_StarWars_Speaker_Mount.step/.stl`) with $30.0 \times 20.0\text{ mm}$ stadium cutout ($R = 10.0\text{ mm}$) and $0.15\text{ mm}$ per-side clearance to mount a generic rectangular replacement speaker (the stock unit's cable is too short for this case). |
 | **LiPo Battery** | Up to 50.0 x 34.0 x 10.0 mm (2000–3000 mAh recommended) | Located at the floor of the rear chassis ($Z = -14.4\text{ mm}$) with ample air clearance above PCB surface components. Higher-capacity packs exceed the bay; smaller ones drain too fast. |
 | **Fasteners** | 4x M3 x 17 mm | $\varnothing 3.4\text{ mm}$ through-holes with $\varnothing 6.2\text{ mm}$ counterbores (3.2 mm depth) on the rear chassis. |
-
-![Assembly kit: printed parts and electronics](images/components.jpg)
-
-*Everything in the build: rear chassis, multicolor front bezel, speaker mount plate, ES3C28P board, 2000 mAh LiPo, replacement rectangular speaker and 4x M3 x 17 mm screws.*
 
 ---
 
@@ -89,6 +90,11 @@ The datapad docks with a matching modular display stand — a two-piece, tool-fr
 
 - **Display Bay:** The $70.0^\circ$ inclined bay holds the datapad at a comfortable viewing angle.
 - **Continuous USB-C Charging Channel:** An open tunnel aligned with the centered USB-C port lets the datapad charge while docked, with straight or right-angle cables.
+
+| | |
+|:---:|:---:|
+| ![Desktop display stand](images/stand_render_iso.png) | ![Datapad docked on the stand](images/stand_render_docked.png) |
+| *Two-piece stand* | *Datapad docked* |
 
 ---
 

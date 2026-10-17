@@ -8,6 +8,11 @@ El diseño incluye tolerancia cero para soportes en la cara frontal (True Zero-S
 
 ![Plano Técnico Master Datapad ES3C28P](blueprints/es3c28p_blueprint_sheet1_assembly.png)
 
+| | | |
+|:---:|:---:|:---:|
+| ![Ensamble — vista isométrica](images/datapad_render_iso.png) | ![Bisel frontal — vista de cara](images/datapad_render_front.png) | ![Chasis trasero — vista interior](images/datapad_render_interior.png) |
+| *Ensamble — isométrica* | *Bisel frontal* | *Interior del chasis trasero* |
+
 ---
 
 ## 📐 Especificaciones y Cotas Calibradas
@@ -25,10 +30,6 @@ El diseño incluye tolerancia cero para soportes en la cara frontal (True Zero-S
 | **Montura de altavoz alternativa** | **54.5 x 25.5 x 1.0 mm** | Placa adaptadora (`ES3C28P_StarWars_Speaker_Mount.step/.stl`) con abertura estadio de $30.0 \times 20.0\text{ mm}$ ($R = 10.0\text{ mm}$) y holgura de $0.15\text{ mm}$ por cara para montar un altavoz rectangular genérico de repuesto (el cable del altavoz original resulta demasiado corto para esta carcasa). |
 | **Batería LiPo** | Hasta 50.0 x 34.0 x 10.0 mm (recomendada: 2000–3000 mAh) | Ubicada en el fondo del chasis trasero ($Z = -14.4\text{ mm}$) con margen de aire holgado sobre los componentes del PCB. Una de mayor capacidad excede la bahía; una de menor se agota demasiado rápido. |
 | **Tornillería** | 4x M3 x 17 mm | Orificios pasantes $\varnothing 3.4\text{ mm}$ con avellanado cilíndrico $\varnothing 6.2\text{ mm}$ (profundidad 3.2 mm) en el chasis trasero. |
-
-![Kit de ensamble: piezas impresas y electrónica](images/components.jpg)
-
-*Todo lo que lleva el build: chasis trasero, bisel frontal multicolor, placa speaker mount, placa ES3C28P, LiPo de 2000 mAh, altavoz rectangular de repuesto y 4 tornillos M3 x 17 mm.*
 
 ---
 
@@ -89,6 +90,11 @@ El datapad se acopla a una base exhibidora modular a juego — ensamble de dos p
 
 - **Bahía de exhibición:** La bahía inclinada a $70.0^\circ$ sostiene el datapad en un ángulo de visualización cómodo.
 - **Canal pasante de carga USB-C:** Un canal abierto alineado con el puerto USB-C centrado permite cargar el datapad mientras está en la base, con cables rectos o en ángulo de 90°.
+
+| | |
+|:---:|:---:|
+| ![Base exhibidora de escritorio](images/stand_render_iso.png) | ![Datapad acoplado a la base](images/stand_render_docked.png) |
+| *Base de dos piezas* | *Datapad acoplado* |
 
 ---
 
