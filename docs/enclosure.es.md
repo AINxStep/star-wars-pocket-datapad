@@ -10,7 +10,7 @@ El diseño incluye tolerancia cero para soportes en la cara frontal (True Zero-S
 
 | | | |
 |:---:|:---:|:---:|
-| ![Datapad ensamblado — vista isométrica](images/datapad_assembly_iso.png) | ![Datapad ensamblado — vista frontal](images/datapad_assembly_front.png) | ![Datapad ensamblado — vista posterior](images/datapad_assembly_rear.png) |
+| ![Datapad ensamblado — vista isométrica](images/datapad_iso.png) | ![Datapad ensamblado — vista frontal](images/datapad_front.png) | ![Datapad ensamblado — vista posterior](images/datapad_rear.png) |
 | *Ensamble — isométrica* | *Ensamble — frontal* | *Ensamble — posterior* |
 
 ---
