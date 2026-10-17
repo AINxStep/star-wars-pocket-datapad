@@ -26,6 +26,10 @@ The design features True Zero-Support FDM printing on the front face (textured P
 | **LiPo Battery** | Up to 50.0 x 34.0 x 10.0 mm (2000–3000 mAh recommended) | Located at the floor of the rear chassis ($Z = -14.4\text{ mm}$) with ample air clearance above PCB surface components. Higher-capacity packs exceed the bay; smaller ones drain too fast. |
 | **Fasteners** | 4x M3 x 17 mm | $\varnothing 3.4\text{ mm}$ through-holes with $\varnothing 6.2\text{ mm}$ counterbores (3.2 mm depth) on the rear chassis. |
 
+![Assembly kit: printed parts and electronics](images/components.jpg)
+
+*Everything in the build: rear chassis, multicolor front bezel, speaker mount plate, ES3C28P board, 2000 mAh LiPo, replacement rectangular speaker and 4x M3 x 17 mm screws.*
+
 ---
 
 ## 📐 Engineering Blueprints

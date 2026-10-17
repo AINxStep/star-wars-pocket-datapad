@@ -78,6 +78,8 @@ para divertir y dar el papel — no un dispositivo práctico.
 
 ## Qué necesitas
 
+![Todo lo que lleva el datapad](docs/images/components.jpg)
+
 - **ES3C28P** — placa ESP32-S3 todo en uno: pantalla IPS ILI9341V de
   2.8" 240x320 (SPI), táctil capacitiva FT6336G, códec de audio ES8311,
   amplificador FM8002E con altavoz, LED RGB WS2812, ranura microSD (SDIO),

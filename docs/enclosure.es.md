@@ -26,6 +26,10 @@ El diseño incluye tolerancia cero para soportes en la cara frontal (True Zero-S
 | **Batería LiPo** | Hasta 50.0 x 34.0 x 10.0 mm (recomendada: 2000–3000 mAh) | Ubicada en el fondo del chasis trasero ($Z = -14.4\text{ mm}$) con margen de aire holgado sobre los componentes del PCB. Una de mayor capacidad excede la bahía; una de menor se agota demasiado rápido. |
 | **Tornillería** | 4x M3 x 17 mm | Orificios pasantes $\varnothing 3.4\text{ mm}$ con avellanado cilíndrico $\varnothing 6.2\text{ mm}$ (profundidad 3.2 mm) en el chasis trasero. |
 
+![Kit de ensamble: piezas impresas y electrónica](images/components.jpg)
+
+*Todo lo que lleva el build: chasis trasero, bisel frontal multicolor, placa speaker mount, placa ES3C28P, LiPo de 2000 mAh, altavoz rectangular de repuesto y 4 tornillos M3 x 17 mm.*
+
 ---
 
 ## 📐 Planos de Ingeniería (Blueprints)

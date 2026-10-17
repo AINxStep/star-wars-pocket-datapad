@@ -76,6 +76,8 @@ not a practical device.
 
 ## What you need
 
+![Everything that goes into the datapad](docs/images/components.jpg)
+
 - **ES3C28P** — an all-in-one ESP32-S3 board: 2.8" 240x320 ILI9341V
   IPS display (SPI), FT6336G capacitive touch, ES8311 audio codec, FM8002E
   amplifier with speaker, WS2812 RGB LED, microSD slot (SDIO), TP4054
