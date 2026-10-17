@@ -30,6 +30,10 @@ Release assets** instead. Download them from
 - `ES3C28P_StarWars_Front_Rebel_Border.stl` (~12 MB)
 - `ES3C28P_StarWars_Front_Rebel_Crest.stl` (~8 MB)
 
+The release also carries the remaining print files for convenience
+(`Rear_Chassis.stl`, `Speaker_Mount.stl` and the two `Stand` STLs) — the
+complete STL set for every printed part lives in one place.
+
 For printing you normally don't need them: the `.3mf` project already packs
 every body with its color assignment. The loose STLs are meant for building
 the multi-color project piece by piece in a different slicer.
