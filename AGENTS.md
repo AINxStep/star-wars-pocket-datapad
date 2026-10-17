@@ -48,7 +48,12 @@ Docs-only changes need no rebuild. The Pages workflow only runs when
 - **Audio:** all shipped sounds are original/synthesized (`tools/gen_sounds.py`);
   `coms1-3.wav` are intentional silence (ambient slots). Never commit movie or
   game audio.
-- **Photos:** strip JPEG EXIF/APPn/COM metadata before committing.
+- **Photos:** strip JPEG EXIF/APPn/COM metadata before committing. FreeCAD PNG
+  renders embed `tEXt`/`zTXt` chunks with the local path (`Title`) — strip
+  those too.
+- **Doc images:** GitHub's `camo` proxy caches image URLs — when replacing an
+  image in docs, rename the file or the stale copy keeps serving. Current
+  assembly renders: `docs/images/datapad_{iso,front,rear}.png`.
 - **Facts worth knowing:** rear chassis ships in the `.3mf` with supports
   enabled (optional, not required); stock speaker is rectangular but its cable
   is too short — the `Speaker_Mount` plate adapts a generic rectangular
