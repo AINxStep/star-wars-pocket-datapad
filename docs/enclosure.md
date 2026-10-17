@@ -4,7 +4,7 @@
 
 Parametric 3D enclosure designed in **FreeCAD 1.1** to transform the **ES3C28P (ESP32-S3 with 2.8" Capacitive IPS display and USB-C)** module into a Star Wars tactical Datapad / comlink (Rebel Alliance / Imperial field communicator aesthetic).
 
-The design features True Zero-Support FDM printing on the front face (textured PEI sheets), calibrated boss extensions compensating for the $4.30\text{ mm}$ capacitive display stack, an expanded continuous upper speaker cavity, direct access to the BOOT button, an optional speaker replacement adapter plate, and 100% mechanical compatibility with the desktop display stand. The front bezel and speaker mount need no supports; the rear chassis is designed to print support-free as well, though the bundled `.3mf` enables them for a cleaner finish.
+The design features True Zero-Support FDM printing on the front face (textured PEI sheets), calibrated boss extensions compensating for the $4.30\text{ mm}$ capacitive display stack, an expanded continuous upper speaker cavity, direct access to the BOOT button, an optional speaker replacement adapter plate, and a matching desktop display stand. The front bezel and speaker mount need no supports; the rear chassis is designed to print support-free as well, though the bundled `.3mf` enables them for a cleaner finish.
 
 ![Master Technical Blueprint ES3C28P Datapad](blueprints/es3c28p_blueprint_sheet1_assembly.png)
 
@@ -83,12 +83,12 @@ The ES3C28P ships with a good-quality **rectangular** speaker, but its connectin
 
 ---
 
-## 🖥️ Desktop Display Stand Compatibility
+## 🖥️ Desktop Display Stand
 
-The ES3C28P enclosure is **100% compatible** with the modular Star Wars Desktop Display Stand ([`Stand_Base`](../3DPrints/stand/StarWars_Stand_Base.stl) + [`Stand_Cradle`](../3DPrints/stand/StarWars_Stand_Cradle.stl)):
+The datapad docks with a matching modular display stand — a two-piece, tool-free tenon/mortise assembly ([`Stand_Base`](../3DPrints/stand/StarWars_Stand_Base.stl) + [`Stand_Cradle`](../3DPrints/stand/StarWars_Stand_Cradle.stl)):
 
-- **Cradle Bay:** The $70.0^\circ$ inclined bay measures $63.0\text{ mm}$ wide by $24.5\text{ mm}$ deep, comfortably holding the $61.0 \times 22.0\text{ mm}$ ES3C28P case.
-- **Continuous USB-C Charging Channel:** The **$28.0\text{ mm}$ open tunnel** aligns with the centered USB-C port, allowing pass-through charging with straight or right-angle cables while docked.
+- **Display Bay:** The $70.0^\circ$ inclined bay holds the datapad at a comfortable viewing angle.
+- **Continuous USB-C Charging Channel:** An open tunnel aligned with the centered USB-C port lets the datapad charge while docked, with straight or right-angle cables.
 
 ---
 

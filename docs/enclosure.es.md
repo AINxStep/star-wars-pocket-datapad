@@ -4,7 +4,7 @@
 
 Diseño paramétrico en 3D desarrollado en **FreeCAD 1.1** para transformar el módulo táctil capacitivo **ES3C28P (ESP32-S3 con pantalla IPS de 2.8" y conector USB-C)** en un intercomunicador Datapad táctico de Star Wars (estética de la Alianza Rebelde / equipo de campo Imperial).
 
-El diseño incluye tolerancia cero para soportes en la cara frontal (True Zero-Support FDM sobre lámina PEI), compensación métrica calibrada para el apilamiento de pantalla capacitiva de $4.30\text{ mm}$, cámara superior ampliada para el altavoz, acceso directo al botón BOOT, montura adaptadora para reemplazo de altavoz, y compatibilidad total con la Base Exhibidora de Escritorio. El bisel frontal y la montura de altavoz no requieren soportes; el chasis trasero también está diseñado para imprimirse sin ellos, aunque el `.3mf` incluido los habilita para un mejor acabado.
+El diseño incluye tolerancia cero para soportes en la cara frontal (True Zero-Support FDM sobre lámina PEI), compensación métrica calibrada para el apilamiento de pantalla capacitiva de $4.30\text{ mm}$, cámara superior ampliada para el altavoz, acceso directo al botón BOOT, montura adaptadora para reemplazo de altavoz, y una Base Exhibidora de Escritorio a juego. El bisel frontal y la montura de altavoz no requieren soportes; el chasis trasero también está diseñado para imprimirse sin ellos, aunque el `.3mf` incluido los habilita para un mejor acabado.
 
 ![Plano Técnico Master Datapad ES3C28P](blueprints/es3c28p_blueprint_sheet1_assembly.png)
 
@@ -83,12 +83,12 @@ La placa ES3C28P incluye de fábrica un altavoz **rectangular** de buena calidad
 
 ---
 
-## 🖥️ Compatibilidad con la Base Exhibidora (Stand de Escritorio)
+## 🖥️ Base Exhibidora de Escritorio
 
-La carcasa ES3C28P es **100% compatible** con la Base Exhibidora de Escritorio modular de Star Wars ([`Stand_Base`](../3DPrints/stand/StarWars_Stand_Base.stl) + [`Stand_Cradle`](../3DPrints/stand/StarWars_Stand_Cradle.stl)):
+El datapad se acopla a una base exhibidora modular a juego — ensamble de dos piezas por espiga y mortaja, sin herramientas ([`Stand_Base`](../3DPrints/stand/StarWars_Stand_Base.stl) + [`Stand_Cradle`](../3DPrints/stand/StarWars_Stand_Cradle.stl)):
 
-- **Bahía de soporte:** La bahía inclinada a $70.0^\circ$ mide $63.0\text{ mm}$ de ancho por $24.5\text{ mm}$ de fondo, alojando holgadamente los $61.0 \times 22.0\text{ mm}$ de la carcasa ES3C28P.
-- **Canal pasante de carga USB-C:** El canal central continuo de **$28.0\text{ mm}$** coincide exactamente con el puerto USB-C centrado de la placa ES3C28P, permitiendo cargar el datapad apoyado en la base con cables rectos o en ángulo de 90°.
+- **Bahía de exhibición:** La bahía inclinada a $70.0^\circ$ sostiene el datapad en un ángulo de visualización cómodo.
+- **Canal pasante de carga USB-C:** Un canal abierto alineado con el puerto USB-C centrado permite cargar el datapad mientras está en la base, con cables rectos o en ángulo de 90°.
 
 ---
 
