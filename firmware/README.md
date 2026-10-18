@@ -71,10 +71,11 @@ You only need a computer, a USB-C cable and
 [PlatformIO](https://platformio.org/) — no ESP32 experience required.
 Pick **one** of the two paths below.
 
-> Already comfortable with `esptool`? Each GitHub release ships a merged
-> `es3c28p-firmware-*.bin` — flash it at offset `0x0`
-> (`esptool.py --chip esp32s3 write_flash 0x0 <file>.bin`) and skip the
-> toolchain entirely.
+> **No install at all?** Each GitHub release ships a merged
+> `es3c28p-firmware-*.bin`. Flash it straight from your browser with
+> [ESP Launchpad](https://espressif.github.io/esp-launchpad/?flashConfigURL=https://raw.githubusercontent.com/AINxStep/star-wars-pocket-datapad/main/docs/esp-launchpad.toml)
+> (Chrome/Edge only — WebSerial), or with `esptool` at offset `0x0`:
+> `esptool.py --chip esp32s3 write_flash 0x0 <file>.bin`.
 
 ### Option A — VS Code + PlatformIO (easiest, graphical)
 

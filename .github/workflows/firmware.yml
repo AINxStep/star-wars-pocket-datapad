@@ -49,6 +49,8 @@ jobs:
           name: es3c28p-firmware
           path: firmware/.pio/build/esp32-s3-es3c28p/es3c28p-firmware.bin
           retention-days: 30
+      # The stable-named copy is what docs/esp-launchpad.toml points at via
+      # releases/latest/download/, so the ESP Launchpad link never goes stale.
       - name: Attach binary to release
         if: github.event_name == 'release'
         env:
@@ -57,4 +59,5 @@ jobs:
         run: >
           gh release upload ${{ github.event.release.tag_name }}
           es3c28p-firmware.bin#es3c28p-firmware-${{ github.event.release.tag_name }}.bin
+          es3c28p-firmware.bin
           --clobber
