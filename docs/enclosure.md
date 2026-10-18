@@ -91,6 +91,7 @@ The datapad docks with a matching modular display stand — a two-piece, tool-fr
 
 - **Display Bay:** The $70.0^\circ$ inclined bay holds the datapad at a comfortable viewing angle.
 - **Continuous USB-C Charging Channel:** An open tunnel aligned with the centered USB-C port lets the datapad charge while docked, with straight or right-angle cables.
+- **Printing:** unlike the enclosure, both stand pieces **need supports** — the ready-to-slice [`ES3C28P_StarWars_Stand.3mf`](../3DPrints/stand/ES3C28P_StarWars_Stand.3mf) (two plates: base + cradle) ships with supports and a dedicated support-interface filament preconfigured.
 
 | | | |
 |:---:|:---:|:---:|

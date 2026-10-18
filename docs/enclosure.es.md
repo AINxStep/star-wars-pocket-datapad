@@ -91,6 +91,7 @@ El datapad se acopla a una base exhibidora modular a juego — ensamble de dos p
 
 - **Bahía de exhibición:** La bahía inclinada a $70.0^\circ$ sostiene el datapad en un ángulo de visualización cómodo.
 - **Canal pasante de carga USB-C:** Un canal abierto alineado con el puerto USB-C centrado permite cargar el datapad mientras está en la base, con cables rectos o en ángulo de 90°.
+- **Impresión:** a diferencia de la carcasa, ambas piezas de la base **necesitan soportes** — el [`ES3C28P_StarWars_Stand.3mf`](../3DPrints/stand/ES3C28P_StarWars_Stand.3mf) listo para laminar (dos placas: base + cuna) ya trae los soportes y un filamento dedicado para la interfaz de soporte preconfigurados.
 
 | | | |
 |:---:|:---:|:---:|

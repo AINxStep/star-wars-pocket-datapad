@@ -10,6 +10,7 @@ en la documentación de la carcasa para notas de ensamble y uso.
 
 | Archivo | Tipo | Descripción |
 | :--- | :--- | :--- |
+| `ES3C28P_StarWars_Stand.3mf` | Proyecto Bambu Studio | Dos placas: base + cuna, soportes preconfigurados |
 | `StarWars_Stand_Base.stl` / `.step` | STL / STEP | Pieza de base con peso |
 | `StarWars_Stand_Cradle.stl` / `.step` | STL / STEP | Cuna inclinada con el canal USB-C |
 | `StarWars_Stand_Cradle_Multicolor.step` | STEP multicuerpo | Cuna con cuerpos sólidos separados para asignar colores en el slicer |
@@ -17,6 +18,8 @@ en la documentación de la carcasa para notas de ensamble y uso.
 
 ## Notas
 
+- Ambas piezas **requieren soportes** — el `.3mf` incluido ya los trae
+  habilitados con un filamento dedicado para la interfaz de soporte.
 - Ensamble de dos piezas por espiga y mortaja, sin herramientas — sin
   tornillos ni pegamento.
 - La bahía inclinada sostiene el datapad en un ángulo de visualización de 70°.
