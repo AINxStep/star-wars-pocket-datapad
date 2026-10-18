@@ -1,6 +1,7 @@
 # Star Wars Pocket Datapad
 
 [![Demo en vivo](https://img.shields.io/badge/DEMO_EN_VIVO-SIMULADOR_WEB-brightgreen)](https://ainxstep.github.io/star-wars-pocket-datapad/)
+[![MakerWorld](https://img.shields.io/badge/MAKERWORLD-MODELO_3D-orange)](https://makerworld.com/en/models/3460001)
 [![Licencia](https://img.shields.io/badge/LICENCIA-MIT_%2F_CC_BY--NC--SA_4.0-blue)](LICENSE)
 [![Hardware](https://img.shields.io/badge/HARDWARE-ES3C28P-orange)](docs/enclosure.es.md)
 
@@ -102,6 +103,9 @@ para divertir y dar el papel — no un dispositivo práctico.
 - La carcasa impresa en 3D: el proyecto listo para laminar es
   [`3DPrints/datapad/ES3C28P_StarWars_Datapad.3mf`](3DPrints/datapad/ES3C28P_StarWars_Datapad.3mf)
   (tres placas: bisel frontal, chasis trasero, montura de altavoz opcional).
+  También publicado en
+  [MakerWorld](https://makerworld.com/en/models/3460001) con todos los
+  archivos de impresión en un solo lugar.
 
 ## Inicio rápido
 
