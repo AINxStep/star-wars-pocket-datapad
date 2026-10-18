@@ -1,0 +1,60 @@
+# Compile check for the ESP32-S3 firmware with PlatformIO. Runs on changes to
+# firmware/ (or this workflow); when a release is published it also attaches
+# the merged flashable binary to it.
+name: Firmware build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'firmware/**'
+      - '.github/workflows/firmware.yml'
+  pull_request:
+    paths:
+      - 'firmware/**'
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write # required to attach binaries when a release is published
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install PlatformIO and esptool
+        run: pip install --upgrade platformio esptool
+      - name: Cache PlatformIO
+        uses: actions/cache@v4
+        with:
+          path: ~/.platformio
+          key: ${{ runner.os }}-pio-${{ hashFiles('firmware/platformio.ini') }}
+      - name: Build firmware
+        working-directory: firmware
+        run: pio run -e esp32-s3-es3c28p
+      - name: Merge flash image
+        working-directory: firmware/.pio/build/esp32-s3-es3c28p
+        run: |
+          BOOT_APP0=$(find ~/.platformio/packages -name boot_app0.bin -path '*framework-arduinoespressif32*' | head -1)
+          esptool.py --chip esp32s3 merge_bin -o es3c28p-firmware.bin \
+            --flash_mode qio --flash_freq 80m --flash_size 8MB \
+            0x0 bootloader.bin 0x8000 partitions.bin 0xe000 "$BOOT_APP0" 0x10000 firmware.bin
+      - uses: actions/upload-artifact@v4
+        with:
+          name: es3c28p-firmware
+          path: firmware/.pio/build/esp32-s3-es3c28p/es3c28p-firmware.bin
+          retention-days: 30
+      - name: Attach binary to release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: firmware/.pio/build/esp32-s3-es3c28p
+        run: >
+          gh release upload ${{ github.event.release.tag_name }}
+          es3c28p-firmware.bin#es3c28p-firmware-${{ github.event.release.tag_name }}.bin
+          --clobber

@@ -71,6 +71,11 @@ You only need a computer, a USB-C cable and
 [PlatformIO](https://platformio.org/) — no ESP32 experience required.
 Pick **one** of the two paths below.
 
+> Already comfortable with `esptool`? Each GitHub release ships a merged
+> `es3c28p-firmware-*.bin` — flash it at offset `0x0`
+> (`esptool.py --chip esp32s3 write_flash 0x0 <file>.bin`) and skip the
+> toolchain entirely.
+
 ### Option A — VS Code + PlatformIO (easiest, graphical)
 
 1. Install [Visual Studio Code](https://code.visualstudio.com/), then open
