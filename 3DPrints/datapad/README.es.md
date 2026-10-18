@@ -15,6 +15,7 @@ completa, dimensiones calibradas y notas de montaje.
 | `ES3C28P_StarWars_Front_Bezel_Multicolor.step` | STEP multicuerpo | Conjunto frontal con cuerpos sólidos separados para asignar colores en el slicer |
 | `ES3C28P_StarWars_Rear_Chassis.stl` / `.step` | STL / STEP | Chasis trasero con cavidad superior de altavoz ampliada |
 | `ES3C28P_StarWars_Speaker_Mount.stl` / `.step` | STL / STEP | Placa adaptadora para un altavoz rectangular genérico de repuesto |
+| `ES3C28P_StarWars_Speaker_Mount_b.stl` / `.step` | STL / STEP | Adaptador de altavoz alternativo (placa de 3.0 mm con rebaje escalonado) para otro altavoz de repuesto — el `.3mf` trae ambas en la placa 3, conserva solo la que necesites |
 | `ES3C28P_StarWars_Pocket_Datapad_Assembly.step` | STEP de ensamble | Conjunto CAD completo con componentes internos de referencia |
 
 ## STL del bisel frontal en alta resolución

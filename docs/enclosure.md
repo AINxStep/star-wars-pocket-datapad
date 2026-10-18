@@ -81,6 +81,7 @@ The ES3C28P ships with a good-quality **rectangular** speaker, but its connectin
 - **Dimensions:** $54.50 \times 25.50 \times 1.00\text{ mm}$ with $R = 5.0\text{ mm}$ rounded corners.
 - **Cutout:** Oblong stadium window measuring $30.0 \times 20.0\text{ mm}$ ($R = 10.0\text{ mm}$ ends).
 - **Installation:** Drops directly into the expanded $54.8\text{ mm}$ upper cavity of the `Rear_Chassis`, providing a stable perimeter flange to seal the speaker using double-sided foam tape or B-7000 adhesive.
+- **Alternate variant:** [`ES3C28P_StarWars_Speaker_Mount_b`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount_b.stl) — a thicker $54.0 \times 27.3 \times 3.0\text{ mm}$ plate with a stepped recess, for a different replacement speaker form factor. The `.3mf` carries both variants on plate 3; print only the one your speaker needs.
 
 ---
 
@@ -91,10 +92,10 @@ The datapad docks with a matching modular display stand — a two-piece, tool-fr
 - **Display Bay:** The $70.0^\circ$ inclined bay holds the datapad at a comfortable viewing angle.
 - **Continuous USB-C Charging Channel:** An open tunnel aligned with the centered USB-C port lets the datapad charge while docked, with straight or right-angle cables.
 
-| | |
-|:---:|:---:|
-| ![Desktop display stand](images/stand_render_iso.png) | ![Datapad docked on the stand](images/stand_render_docked.png) |
-| *Two-piece stand* | *Datapad docked* |
+| | | |
+|:---:|:---:|:---:|
+| ![Desktop display stand](images/stand_render_iso.png) | ![Datapad docked on the stand](images/stand_render_docked.png) | ![Finished datapad on the stand](images/datapad-docked-photo.jpg) |
+| *Two-piece stand* | *Datapad docked* | *Real build, docked* |
 
 ---
 
@@ -117,8 +118,8 @@ A pre-configured Bambu Studio / OrcaSlicer project is provided ready to slice:
     counterbores and cavity edges. Disable them in the slicer if you
     prefer to skip them.
   * Layer height: $0.16\text{ mm}$ or $0.20\text{ mm}$.
-* **Plate 3 — Speaker Mount:**
-  * Flat $1.0\text{ mm}$ plate (5 layers at $0.20\text{ mm}$).
+* **Plate 3 — Speaker Mounts:**
+  * Both adapter variants ship on the plate: the flat $1.0\text{ mm}$ `Speaker_Mount` and the $3.0\text{ mm}$ `Speaker_Mount_b`. **Keep only the one your speaker needs** and delete the other before slicing — or print both if you are still deciding.
   * **Zero supports.**
 
 ### Reference Print Job (as shown in the cover photo)
@@ -150,6 +151,7 @@ A single-color bezel prints perfectly fine too — simply assign all plate-1 obj
 | [`ES3C28P_StarWars_Front_Bezel_Multicolor.step`](../3DPrints/datapad/ES3C28P_StarWars_Front_Bezel_Multicolor.step) | Multi-body STEP | Front assembly with separated solid bodies for multi-color slicer assignment |
 | [`ES3C28P_StarWars_Rear_Chassis.stl`](../3DPrints/datapad/ES3C28P_StarWars_Rear_Chassis.stl) / [`.step`](../3DPrints/datapad/ES3C28P_StarWars_Rear_Chassis.step) | STL / STEP | Rear chassis with widened upper cavity ($54.8\text{ mm}$) |
 | [`ES3C28P_StarWars_Speaker_Mount.stl`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount.stl) / [`.step`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount.step) | STL / STEP | Speaker adapter plate for acoustic upgrade |
+| [`ES3C28P_StarWars_Speaker_Mount_b.stl`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount_b.stl) / [`.step`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount_b.step) | STL / STEP | Alternate speaker adapter ($3.0\text{ mm}$ plate with stepped recess) for a different replacement speaker |
 | [`ES3C28P_StarWars_Pocket_Datapad_Assembly.step`](../3DPrints/datapad/ES3C28P_StarWars_Pocket_Datapad_Assembly.step) | Assembly STEP | Full CAD assembly with internal component mockups |
 | `es3c28p_blueprint_sheet*.pdf/.png` in `docs/blueprints/` | PDF / PNG | Four-sheet engineering drawing set (ES3C28P-ME-001 … -004) |
 

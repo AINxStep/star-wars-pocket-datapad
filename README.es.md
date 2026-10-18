@@ -19,6 +19,10 @@ para divertir y dar el papel — no un dispositivo práctico.
 
 ![El datapad terminado](docs/images/datapad-cover.jpg)
 
+| | | |
+|:---:|:---:|:---:|
+| ![Pantalla Home](docs/images/ui-home.jpg) | ![Pantalla de ajustes](docs/images/ui-settings.jpg) | ![Proyector de hologramas](docs/images/ui-hologram.jpg) |
+
 > **Proyecto de fans no oficial.** Star Wars y todos los nombres y diseños
 > relacionados pertenecen a Lucasfilm / Disney. Sin ánimo de lucro; ver
 > [NOTICE.md](NOTICE.md).

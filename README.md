@@ -20,6 +20,10 @@ not a practical device.
 
 ![The finished datapad](docs/images/datapad-cover.jpg)
 
+| | | |
+|:---:|:---:|:---:|
+| ![Home screen](docs/images/ui-home.jpg) | ![Settings screen](docs/images/ui-settings.jpg) | ![Hologram projector](docs/images/ui-hologram.jpg) |
+
 > **Unofficial fan project.** Star Wars and all related names and designs
 > belong to Lucasfilm / Disney. Non-commercial; see
 > [NOTICE.md](NOTICE.md).

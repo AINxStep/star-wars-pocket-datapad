@@ -81,6 +81,7 @@ La placa ES3C28P incluye de fábrica un altavoz **rectangular** de buena calidad
 - **Medidas:** $54.50 \times 25.50 \times 1.00\text{ mm}$ con esquinas $R = 5.0\text{ mm}$.
 - **Abertura:** Ventana oblonga tipo estadio de $30.0 \times 20.0\text{ mm}$ ($R = 10.0\text{ mm}$ en extremos).
 - **Montaje:** Asienta directamente en el fondo de la cámara superior ensanchada ($54.8\text{ mm}$) del `Rear_Chassis`, ofreciendo un soporte perimetral estable para sellar la cámara acústica con cinta de doble cara o adhesivo B-7000.
+- **Variante alternativa:** [`ES3C28P_StarWars_Speaker_Mount_b`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount_b.stl) — placa más gruesa de $54.0 \times 27.3 \times 3.0\text{ mm}$ con rebaje escalonado, pensada para otro formato de altavoz de repuesto. El `.3mf` lleva ambas variantes en la placa 3; imprime solo la que tu altavoz necesite.
 
 ---
 
@@ -91,10 +92,10 @@ El datapad se acopla a una base exhibidora modular a juego — ensamble de dos p
 - **Bahía de exhibición:** La bahía inclinada a $70.0^\circ$ sostiene el datapad en un ángulo de visualización cómodo.
 - **Canal pasante de carga USB-C:** Un canal abierto alineado con el puerto USB-C centrado permite cargar el datapad mientras está en la base, con cables rectos o en ángulo de 90°.
 
-| | |
-|:---:|:---:|
-| ![Base exhibidora de escritorio](images/stand_render_iso.png) | ![Datapad acoplado a la base](images/stand_render_docked.png) |
-| *Base de dos piezas* | *Datapad acoplado* |
+| | | |
+|:---:|:---:|:---:|
+| ![Base exhibidora de escritorio](images/stand_render_iso.png) | ![Datapad acoplado a la base](images/stand_render_docked.png) | ![Datapad terminado sobre la base](images/datapad-docked-photo.jpg) |
+| *Base de dos piezas* | *Datapad acoplado* | *Unidad real, acoplada* |
 
 ---
 
@@ -117,8 +118,8 @@ El proyecto integral preconfigurado para Bambu Studio / OrcaSlicer se encuentra 
     alrededor de los avellanados y los bordes de la cavidad. Desactívalos
     en el laminador si prefieres omitirlos.
   * Altura de capa: $0.16\text{ mm}$ o $0.20\text{ mm}$.
-* **Placa 3 — Speaker Mount:**
-  * Pieza plana de $1.0\text{ mm}$ ($5$ capas a $0.20\text{ mm}$).
+* **Placa 3 — Monturas de altavoz:**
+  * La placa trae las dos variantes del adaptador: la plana de $1.0\text{ mm}$ `Speaker_Mount` y la de $3.0\text{ mm}$ `Speaker_Mount_b`. **Conserva solo la que tu altavoz necesite** y elimina la otra antes de laminar — o imprime ambas si aún estás decidiendo.
   * **Cero soportes.**
 
 ### Trabajo de Impresión de Referencia (como en la foto de portada)
@@ -150,6 +151,7 @@ Un bisel monocolor también imprime perfectamente — simplemente asigna todos l
 | [`ES3C28P_StarWars_Front_Bezel_Multicolor.step`](../3DPrints/datapad/ES3C28P_StarWars_Front_Bezel_Multicolor.step) | STEP multicolor | Ensamble frontal con sólidos separados para fácil asignación de color en slicers |
 | [`ES3C28P_StarWars_Rear_Chassis.stl`](../3DPrints/datapad/ES3C28P_StarWars_Rear_Chassis.stl) / [`.step`](../3DPrints/datapad/ES3C28P_StarWars_Rear_Chassis.step) | STL / STEP | Chasis trasero con cámara superior ensanchada ($54.8\text{ mm}$) |
 | [`ES3C28P_StarWars_Speaker_Mount.stl`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount.stl) / [`.step`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount.step) | STL / STEP | Placa montura adaptadora para sustitución de altavoz |
+| [`ES3C28P_StarWars_Speaker_Mount_b.stl`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount_b.stl) / [`.step`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount_b.step) | STL / STEP | Adaptador de altavoz alternativo (placa de $3.0\text{ mm}$ con rebaje escalonado) para otro altavoz de repuesto |
 | [`ES3C28P_StarWars_Pocket_Datapad_Assembly.step`](../3DPrints/datapad/ES3C28P_StarWars_Pocket_Datapad_Assembly.step) | STEP de ensamble | Ensamble CAD completo con mockups de componentes |
 | `es3c28p_blueprint_sheet*.pdf/.png` en `docs/blueprints/` | PDF / PNG | Juego de cuatro láminas de plano técnico (ES3C28P-ME-001 … -004) |
 

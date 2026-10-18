@@ -15,6 +15,7 @@ calibrated dimensions and assembly notes.
 | `ES3C28P_StarWars_Front_Bezel_Multicolor.step` | Multi-body STEP | Front assembly with separated solid bodies for multi-color slicer assignment |
 | `ES3C28P_StarWars_Rear_Chassis.stl` / `.step` | STL / STEP | Rear chassis with widened upper speaker cavity |
 | `ES3C28P_StarWars_Speaker_Mount.stl` / `.step` | STL / STEP | Adapter plate for a generic rectangular replacement speaker |
+| `ES3C28P_StarWars_Speaker_Mount_b.stl` / `.step` | STL / STEP | Alternate speaker adapter (3.0 mm plate with stepped recess) for a different replacement speaker — the `.3mf` ships both on plate 3, keep only the one you need |
 | `ES3C28P_StarWars_Pocket_Datapad_Assembly.step` | Assembly STEP | Full CAD assembly with internal component mockups |
 
 ## High-resolution front-bezel STLs
