@@ -11,6 +11,7 @@ on:
     paths:
       - 'firmware/**'
       - 'simulator/**'
+      - 'docs/esp-launchpad.toml'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -36,6 +37,16 @@ jobs:
           version: 6.0.11
       - name: Build the simulator
         run: ./simulator/build.sh
+      # Stage the ESP Launchpad quick-flash files under /flash/: the config
+      # TOML plus the merged firmware image pulled from the latest release
+      # (Pages serves Access-Control-Allow-Origin, which the web flasher
+      # needs; GitHub release assets do not send CORS headers).
+      - name: Stage ESP Launchpad files
+        run: |
+          mkdir -p simulator/web/flash
+          cp docs/esp-launchpad.toml simulator/web/flash/esp-launchpad.toml
+          curl -sfL -o simulator/web/flash/es3c28p-firmware.bin \
+            https://github.com/${{ github.repository }}/releases/latest/download/es3c28p-firmware.bin
       - uses: actions/configure-pages@v5
         if: github.event.repository.private == false
       - uses: actions/upload-pages-artifact@v3

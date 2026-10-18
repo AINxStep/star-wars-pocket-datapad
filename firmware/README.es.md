@@ -81,7 +81,7 @@ ESP32. Elige **una** de las dos opciones.
 
 > **¿Sin instalar nada?** Cada release de GitHub trae un binario fusionado
 > `es3c28p-firmware-*.bin`. Flashealo directo desde el navegador con
-> [ESP Launchpad](https://espressif.github.io/esp-launchpad/?flashConfigURL=https://raw.githubusercontent.com/AINxStep/star-wars-pocket-datapad/main/docs/esp-launchpad.toml)
+> [ESP Launchpad](https://espressif.github.io/esp-launchpad/?flashConfigURL=https://ainxstep.github.io/star-wars-pocket-datapad/flash/esp-launchpad.toml)
 > (solo Chrome/Edge — WebSerial), o con `esptool` en el offset `0x0`:
 > `esptool.py --chip esp32s3 write_flash 0x0 <archivo>.bin`.
 
