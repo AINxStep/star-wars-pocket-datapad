@@ -104,8 +104,8 @@ para divertir y dar el papel — no un dispositivo práctico.
   [`3DPrints/datapad/ES3C28P_StarWars_Datapad.3mf`](3DPrints/datapad/ES3C28P_StarWars_Datapad.3mf)
   (tres placas: bisel frontal, chasis trasero, montura de altavoz opcional).
   También publicado en
-  [MakerWorld](https://makerworld.com/en/models/3460001) con todos los
-  archivos de impresión en un solo lugar.
+  [MakerWorld](https://makerworld.com/en/models/3460001) — el listing
+  incluye la base exhibidora como segundo perfil de impresión.
 
 ## Inicio rápido
 

@@ -101,8 +101,8 @@ not a practical device.
   [`3DPrints/datapad/ES3C28P_StarWars_Datapad.3mf`](3DPrints/datapad/ES3C28P_StarWars_Datapad.3mf)
   (three plates: front bezel, rear chassis, optional speaker mount).
   Also published on
-  [MakerWorld](https://makerworld.com/en/models/3460001) with all the
-  print files in one place.
+  [MakerWorld](https://makerworld.com/en/models/3460001) — the listing
+  carries the stand as a second print profile.
 
 ## Quick start
 

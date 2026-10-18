@@ -27,5 +27,7 @@ en la documentación de la carcasa para notas de ensamble y uso.
   cargar el datapad mientras está acoplado (cables rectos o en ángulo de 90°).
 - Ambos STL también se publican como assets del
   [Release v1.0.0](https://github.com/AINxStep/star-wars-pocket-datapad/releases/tag/v1.0.0).
+- Se publica como segundo perfil de impresión en el
+  [listing de MakerWorld](https://makerworld.com/en/models/3460001) del datapad.
 
 El diseño físico se licencia bajo [CC BY-NC-SA 4.0](../../LICENSE-HARDWARE.md).

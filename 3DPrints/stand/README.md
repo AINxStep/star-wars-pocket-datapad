@@ -26,5 +26,7 @@ docs for assembly and usage notes.
   datapad charge while docked (straight or right-angle cables).
 - Both STLs are also published as Release assets in
   [Release v1.0.0](https://github.com/AINxStep/star-wars-pocket-datapad/releases/tag/v1.0.0).
+- Ships as a second print profile on the datapad's
+  [MakerWorld listing](https://makerworld.com/en/models/3460001).
 
 Physical design is licensed under [CC BY-NC-SA 4.0](../../LICENSE-HARDWARE.md).
