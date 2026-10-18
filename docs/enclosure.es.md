@@ -76,12 +76,12 @@ cajetines) está disponible en `docs/blueprints/` en PDF y PNG:
 
 ## 🔊 Montura Adaptadora de Altavoz (`Speaker_Mount`)
 
-La placa ES3C28P incluye de fábrica un altavoz **rectangular** de buena calidad, pero su cable de conexión es demasiado corto para tenderlo cómodamente dentro de esta carcasa. Para esa situación se incluye la pieza adaptadora [`ES3C28P_StarWars_Speaker_Mount`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount.stl), que permite montar un **altavoz rectangular genérico de repuesto** (el tipo común que se vende en AliExpress y tiendas similares). Si puedes alargar o reencaminar el cable del altavoz original, el adaptador no es necesario:
+La placa ES3C28P incluye de fábrica un altavoz **rectangular** de buena calidad, pero su cable de conexión es demasiado corto para tenderlo cómodamente dentro de esta carcasa. Para esa situación se incluye la pieza adaptadora [`ES3C28P_StarWars_Speaker_Mount`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount.stl), que permite montar un **altavoz rectangular genérico de repuesto** (el tipo común que se vende en AliExpress y tiendas similares). Si puedes alargar o reencaminar el cable del altavoz original — o montarlo con la variante `Speaker_Mount_b` de abajo — este adaptador plano no es necesario:
 
 - **Medidas:** $54.50 \times 25.50 \times 1.00\text{ mm}$ con esquinas $R = 5.0\text{ mm}$.
 - **Abertura:** Ventana oblonga tipo estadio de $30.0 \times 20.0\text{ mm}$ ($R = 10.0\text{ mm}$ en extremos).
 - **Montaje:** Asienta directamente en el fondo de la cámara superior ensanchada ($54.8\text{ mm}$) del `Rear_Chassis`, ofreciendo un soporte perimetral estable para sellar la cámara acústica con cinta de doble cara o adhesivo B-7000.
-- **Variante alternativa:** [`ES3C28P_StarWars_Speaker_Mount_b`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount_b.stl) — placa más gruesa de $54.0 \times 27.3 \times 3.0\text{ mm}$ con rebaje escalonado, pensada para otro formato de altavoz de repuesto. El `.3mf` lleva ambas variantes en la placa 3; imprime solo la que tu altavoz necesite.
+- **Variante alternativa:** [`ES3C28P_StarWars_Speaker_Mount_b`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount_b.stl) — placa más gruesa de $54.0 \times 27.3 \times 3.0\text{ mm}$ con rebaje escalonado, diseñada para montar el **altavoz original de la ES3C28P** (el de fábrica) si prefieres conservarlo en lugar de comprar un repuesto genérico. El `.3mf` lleva ambas variantes en la placa 3; imprime solo la que tu altavoz necesite.
 
 ---
 
@@ -151,7 +151,7 @@ Un bisel monocolor también imprime perfectamente — simplemente asigna todos l
 | [`ES3C28P_StarWars_Front_Bezel_Multicolor.step`](../3DPrints/datapad/ES3C28P_StarWars_Front_Bezel_Multicolor.step) | STEP multicolor | Ensamble frontal con sólidos separados para fácil asignación de color en slicers |
 | [`ES3C28P_StarWars_Rear_Chassis.stl`](../3DPrints/datapad/ES3C28P_StarWars_Rear_Chassis.stl) / [`.step`](../3DPrints/datapad/ES3C28P_StarWars_Rear_Chassis.step) | STL / STEP | Chasis trasero con cámara superior ensanchada ($54.8\text{ mm}$) |
 | [`ES3C28P_StarWars_Speaker_Mount.stl`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount.stl) / [`.step`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount.step) | STL / STEP | Placa montura adaptadora para sustitución de altavoz |
-| [`ES3C28P_StarWars_Speaker_Mount_b.stl`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount_b.stl) / [`.step`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount_b.step) | STL / STEP | Adaptador de altavoz alternativo (placa de $3.0\text{ mm}$ con rebaje escalonado) para otro altavoz de repuesto |
+| [`ES3C28P_StarWars_Speaker_Mount_b.stl`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount_b.stl) / [`.step`](../3DPrints/datapad/ES3C28P_StarWars_Speaker_Mount_b.step) | STL / STEP | Adaptador de altavoz alternativo (placa de $3.0\text{ mm}$ con rebaje escalonado) para el altavoz original de la ES3C28P |
 | [`ES3C28P_StarWars_Pocket_Datapad_Assembly.step`](../3DPrints/datapad/ES3C28P_StarWars_Pocket_Datapad_Assembly.step) | STEP de ensamble | Ensamble CAD completo con mockups de componentes |
 | `es3c28p_blueprint_sheet*.pdf/.png` en `docs/blueprints/` | PDF / PNG | Juego de cuatro láminas de plano técnico (ES3C28P-ME-001 … -004) |
 
